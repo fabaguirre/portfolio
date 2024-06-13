@@ -1,5 +1,13 @@
 ---
+import { profileData } from "@config/constants";
+
 const currentYear = new Date().getFullYear();
+const {
+  names: { socialNickname },
+  email,
+} = profileData;
+
+const mailTo = `mailto:${email}`;
 ---
 
 <footer
@@ -8,7 +16,7 @@ const currentYear = new Date().getFullYear();
   <span class="text-zinc-800/90 dark:text-zinc-200/90">
     © {currentYear}
     <a href="https://fabos.dev/" class="hover:underline" target="_blank">
-      fabos
+      {socialNickname}
     </a>. Have a nice day! 🎉
   </span>
 
@@ -19,9 +27,7 @@ const currentYear = new Date().getFullYear();
       <a href="/#about" class="hover:underline">Sobre mí</a>
     </li>
     <li>
-      <a href="mailto:faguirrecruz@hotmail.com" class="hover:underline">
-        Contacto
-      </a>
+      <a href={mailTo} class="hover:underline"> Contacto </a>
     </li>
   </ul>
 </footer>
