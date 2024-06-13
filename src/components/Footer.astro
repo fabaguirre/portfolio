@@ -3,11 +3,9 @@ import { profileData } from "@config/constants";
 
 const currentYear = new Date().getFullYear();
 const {
+  mailto,
   names: { socialNickname },
-  email,
 } = profileData;
-
-const mailTo = `mailto:${email}`;
 ---
 
 <footer
@@ -27,7 +25,7 @@ const mailTo = `mailto:${email}`;
       <a href="/#about" class="hover:underline">Sobre mí</a>
     </li>
     <li>
-      <a href={mailTo} class="hover:underline"> Contacto </a>
+      <a href={mailto} class="hover:underline"> Contacto </a>
     </li>
   </ul>
 </footer>
