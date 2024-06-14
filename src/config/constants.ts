@@ -24,7 +24,7 @@ export const PAGE_SECTIONS = [
     title: "Experience",
     icon: () => import("@icons/Briefcase.astro").then((mod) => mod.default),
     component: () =>
-      import("@icons/Briefcase.astro").then((mod) => mod.default),
+      import("@components/Experience.astro").then((mod) => mod.default),
   },
   {
     id: "projects",
