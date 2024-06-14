@@ -35,10 +35,10 @@ export const PAGE_SECTIONS = [
   },
   {
     id: "about",
-    title: "Acerca de mi",
+    title: "Acerca de mí",
     icon: () => import("@icons/UserSquare.astro").then((mod) => mod.default),
     component: () =>
-      import("@icons/Briefcase.astro").then((mod) => mod.default),
+      import("@components/AboutMe.astro").then((mod) => mod.default),
   },
   {
     id: "contact",
