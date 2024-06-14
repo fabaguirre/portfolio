@@ -1,5 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
+import Hero from "@components/Hero.astro";
 import PageSection from "@components/PageSection.astro";
 import SectionContainer from "@components/SectionContainer.astro";
 
@@ -12,11 +14,7 @@ import { PAGE_SECTIONS } from "@config/constants";
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <h1 class="text-4xl font-bold">Welcome to Astro</h1>
-      <p class="text-lg">
-        Astro is a new kind of static site builder that delivers lightning-fast
-        performance with a modern developer experience.
-      </p>
+      <Hero />
     </SectionContainer>
 
     <div class="space-y-24">
