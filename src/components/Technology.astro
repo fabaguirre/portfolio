@@ -1,0 +1,19 @@
+---
+const { class: className, icon: Icon, label } = Astro.props;
+---
+
+<span
+  aria-label={label}
+  class:list={[
+    "flex cursor-default select-none items-center gap-x-2 rounded-full px-2 py-1 text-xs",
+    className,
+  ]}
+>
+  <Icon
+    class:list={{
+      "size-4": ["MySQL", "Express"].includes(label),
+      "size-3": label !== "MySQL",
+    }}
+  />
+  {label}
+</span>
