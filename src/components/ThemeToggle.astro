@@ -39,29 +39,30 @@ const THEMES = [
     }
   </button>
 
-  <div
-    id="themes-menu"
-    class="closed scale-80 absolute right-0 top-8 hidden min-w-[8rem] rounded-md border border-gray-100 bg-white/90 p-1 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md dark:border-gray-500/20 dark:bg-gray-900/90"
-  >
-    <ul>
+  <dialog id="themes-menu" open>
+    <ul
+      class="top-8 min-w-32 rounded-md border border-gray-100 bg-gray-300/70 p-1 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] dark:border-gray-500/20 dark:bg-white/35"
+    >
       {
         THEMES.map((theme) => (
-          <li
-            data-theme={theme.value}
-            class="themes-menu-option rounded-sm px-2 py-1.5 hover:bg-neutral-400/40 dark:hover:bg-gray-500/50"
-          >
-            {theme.name}
+          <li>
+            <button
+              data-theme={theme.value}
+              class="themes-menu-option w-full rounded px-2 py-1.5 text-start hover:bg-black/10 dark:hover:bg-black/20"
+            >
+              {theme.name}
+            </button>
           </li>
         ))
       }
     </ul>
-  </div>
+  </dialog>
 </div>
 
 <style>
-  #themes-menu:not(.closed) {
+  #themes-menu[open] {
     display: inline;
-    animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: scale-up-center 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   @keyframes scale-up-center {
@@ -81,6 +82,7 @@ const THEMES = [
   let remove = null;
   const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
   const themesMenu = document.getElementById("themes-menu");
+  const dialog = document.getElementById("themes-menu");
 
   const getThemePreference = () => {
     if (typeof window.localStorage !== "undefined") {
@@ -116,15 +118,16 @@ const THEMES = [
     updateIcon(themePreference);
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
     document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+    dialog.close();
   };
 
   updateTheme();
 
-  document.addEventListener("click", () => themesMenu.classList.add("closed"));
+  document.addEventListener("click", () => dialog.close());
 
   document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
     e.stopPropagation();
-    themesMenu.classList.toggle("closed");
+    dialog.show();
   });
 
   function onThemeClick(e) {
