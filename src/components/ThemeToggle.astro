@@ -39,10 +39,12 @@ const THEMES = [
     }
   </button>
 
-  <dialog id="themes-menu" open>
-    <ul
-      class="top-8 min-w-32 rounded-md border border-gray-100 bg-gray-300/70 p-1 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] dark:border-gray-500/20 dark:bg-white/35"
-    >
+  <dialog
+    id="themes-menu"
+    class="top-8 min-w-32 rounded-md border border-gray-100 bg-gray-100 p-1 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] dark:border-gray-500/20 dark:bg-gray-500"
+    open
+  >
+    <ul>
       {
         THEMES.map((theme) => (
           <li>

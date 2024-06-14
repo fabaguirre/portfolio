@@ -8,9 +8,7 @@ const { title, icon } = Astro.props;
 const Icon = await icon?.();
 ---
 
-<h2
-  class="mb-6 flex items-center gap-x-3 text-3xl font-semibold text-black/80 dark:text-white"
->
+<h2 class="mb-6 flex items-center gap-x-3 text-3xl font-semibold">
   {Icon && <Icon class="size-8" />}
 
   {title}
