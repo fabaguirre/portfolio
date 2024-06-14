@@ -1,13 +1,21 @@
 ---
 import ProjectItem from "@components/ProjectItem.astro";
 
+import AWSIcon from "@icons/Aws.astro";
 import ExpressIcon from "@icons/Express.astro";
 import GraphQLIcon from "@icons/GraphQL.astro";
+import MySQLIcon from "@icons/MySql.astro";
 import NodeJSIcon from "@icons/NodeJS.astro";
+import PrismaIcon from "@icons/Prisma.astro";
 import TypescriptIcon from "@icons/Typescript.astro";
 import VueIcon from "@icons/Vue.astro";
 
 const TECHNOLOGIES = {
+  AWS: {
+    name: "AWS",
+    class: "bg-[#ff990035] text-[#ff9900]",
+    icon: AWSIcon,
+  },
   EXPRESS: {
     name: "Express",
     class: "bg-[#22222235] text-[#222222] dark:bg-[#222222aa] dark:text-white",
@@ -18,10 +26,20 @@ const TECHNOLOGIES = {
     class: "bg-[#e1009a35] text-[#e1009a]",
     icon: GraphQLIcon,
   },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758f35] text-[#00758f] dark:bg-[#00758f35]",
+    icon: MySQLIcon,
+  },
   NODE: {
     name: "Node.js",
     class: "bg-[#44883e35] text-[#44883e]", // #333333
     icon: NodeJSIcon,
+  },
+  PRISMA: {
+    name: "Prisma",
+    class: "bg-[#0c344b55] text-[#0c344b] dark:bg-[#0c344bbb] dark:text-white",
+    icon: PrismaIcon,
   },
   TYPESCRIPT: {
     name: "TypeScript",
@@ -55,10 +73,13 @@ const projects = [
       "A medical appointment management application designed for healthcare professionals. It allows doctors and medical staff to efficiently manage appointments with their patients.",
     image: "med_appt.webp",
     technologies: [
-      TECHNOLOGIES.NODE,
-      TECHNOLOGIES.EXPRESS,
       TECHNOLOGIES.VUE,
       TECHNOLOGIES.TYPESCRIPT,
+      TECHNOLOGIES.NODE,
+      TECHNOLOGIES.EXPRESS,
+      TECHNOLOGIES.AWS,
+      TECHNOLOGIES.MYSQL,
+      TECHNOLOGIES.PRISMA,
     ],
   },
 ];

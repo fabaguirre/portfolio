@@ -17,8 +17,10 @@ const { description, image, link, reverse, title, technologies } = Astro.props;
 const projectUrl = `/projects/${image}`;
 const projectAlt = `Capture of the ${title} website`;
 const rowClass = reverse ? "md:flex-row-reverse" : "md:flex-row";
-const imageClass = `${reverse ? "start" : "end"}-14`;
-const imageHoverClass = ` [&:hover>img]:${reverse ? "-" : ""}translate-x-4`;
+const imageClass = reverse ? "start-14" : "end-14";
+const imageHoverClass = reverse
+  ? "[&:hover>img]:-translate-x-4"
+  : "[&:hover>img]:translate-x-4";
 ---
 
 <article class:list={[`flex flex-col gap-4 md:gap-8`, rowClass]}>
@@ -39,10 +41,11 @@ const imageHoverClass = ` [&:hover>img]:${reverse ? "-" : ""}translate-x-4`;
     />
   </div>
 
-  <div class="flex-1 space-y-6">
+  <div class="w-1/2 space-y-6">
     <header>
       <h3 class="text-2xl font-bold">{title}</h3>
-      <ul class="mt-3 flex flex-row gap-x-2">
+
+      <ul class="mt-3 flex flex-row flex-wrap gap-2">
         {
           technologies.map(({ name, class: techClass, icon: Icon }) => (
             <li>
@@ -52,7 +55,12 @@ const imageHoverClass = ` [&:hover>img]:${reverse ? "-" : ""}translate-x-4`;
                   techClass,
                 ]}
               >
-                <Icon class="size-3" />
+                <Icon
+                  class:list={{
+                    "size-4": ["MySQL", "Express"].includes(name),
+                    "size-3": name !== "MySQL",
+                  }}
+                />
                 {name}
               </span>
             </li>
