@@ -28,13 +28,14 @@ const typeClass = {
 
 const typeColor = typeClass[type];
 
-const dateRange = `${new Date(startDate).toLocaleDateString("en-US", {
-  month: "long",
-  year: "numeric",
-})} - ${new Date(endDate).toLocaleDateString("en-US", {
-  month: "long",
-  year: "numeric",
-})}`;
+function formatDate(date: string) {
+  return new Date(date).toLocaleDateString("es", {
+    month: "long",
+    year: "numeric",
+  });
+}
+
+const dateRange = `${formatDate(startDate)} - ${formatDate(endDate)}`;
 ---
 
 <article class="flex flex-col gap-5 lg:flex-row">
@@ -62,7 +63,7 @@ const dateRange = `${new Date(startDate).toLocaleDateString("en-US", {
     </h4>
 
     <time
-      class="mb-3 block text-sm font-normal leading-none text-gray-600/80 lg:mb-5 dark:text-white/80"
+      class="mb-3 block text-sm font-normal capitalize leading-none text-gray-600/80 lg:mb-5 dark:text-white/80"
     >
       {dateRange}
     </time>
