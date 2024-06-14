@@ -1,5 +1,6 @@
 ---
 import { PAGE_SECTIONS } from "@config/constants";
+import ThemeToggle from "@components/ThemeToggle.astro";
 
 const navItems = PAGE_SECTIONS;
 ---
@@ -15,5 +16,6 @@ const navItems = PAGE_SECTIONS;
         </a>
       ))
     }
+    <ThemeToggle class="[display:none]" />
   </nav>
 </header>
