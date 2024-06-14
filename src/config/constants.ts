@@ -31,7 +31,7 @@ export const PAGE_SECTIONS = [
     title: "Proyectos",
     icon: () => import("@icons/SourceCode.astro").then((mod) => mod.default),
     component: () =>
-      import("@icons/Briefcase.astro").then((mod) => mod.default),
+      import("@components/Projects.astro").then((mod) => mod.default),
   },
   {
     id: "about",

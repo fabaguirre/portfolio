@@ -1,0 +1,74 @@
+---
+import ProjectItem from "@components/ProjectItem.astro";
+
+import ExpressIcon from "@icons/Express.astro";
+import GraphQLIcon from "@icons/GraphQL.astro";
+import NodeJSIcon from "@icons/NodeJS.astro";
+import TypescriptIcon from "@icons/Typescript.astro";
+import VueIcon from "@icons/Vue.astro";
+
+const TECHNOLOGIES = {
+  EXPRESS: {
+    name: "Express",
+    class: "bg-[#222222] text-white",
+    icon: ExpressIcon,
+  },
+  GRAPHQL: {
+    name: "GraphQL",
+    class: "bg-[#e1009a36] text-white",
+    icon: GraphQLIcon,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#215732] text-white", // #333333
+    icon: NodeJSIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#00273f] text-white",
+    icon: TypescriptIcon,
+  },
+  VUE: {
+    name: "Vue.js",
+    class: "bg-[#34495E] text-white",
+    icon: VueIcon,
+  },
+};
+
+const projects = [
+  {
+    title: "FractalUp | All-In-One Metaverse",
+    description:
+      "FractalUp is a platform that allows you to create your own metaverse with a few clicks. It is a project that I have been working on for the past year and I am very proud of it.",
+    link: "https://example.com",
+    image: "fractalup.webp",
+    technologies: [
+      TECHNOLOGIES.VUE,
+      TECHNOLOGIES.TYPESCRIPT,
+      TECHNOLOGIES.GRAPHQL,
+    ],
+  },
+  {
+    title: "Medical Appointment App",
+    description:
+      "A medical appointment management application designed for healthcare professionals. It allows doctors and medical staff to efficiently manage appointments with their patients.",
+    image: "med_appt.webp",
+    technologies: [
+      TECHNOLOGIES.NODE,
+      TECHNOLOGIES.EXPRESS,
+      TECHNOLOGIES.VUE,
+      TECHNOLOGIES.TYPESCRIPT,
+    ],
+  },
+];
+---
+
+<ul class="mt-16 space-y-24">
+  {
+    projects.map((project, index) => (
+      <li>
+        <ProjectItem {...project} reverse={index % 2 === 1} />
+      </li>
+    ))
+  }
+</ul>
