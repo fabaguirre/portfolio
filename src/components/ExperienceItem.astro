@@ -39,19 +39,19 @@ const dateRange = `${new Date(startDate).toLocaleDateString("en-US", {
 
 <article class="flex flex-col gap-5 lg:flex-row">
   <span
-    class="absolute -start-[17px] flex size-8 items-center justify-center rounded-full bg-blue-100 dark:bg-pink-950"
+    class="absolute -start-[17px] flex size-8 items-center justify-center rounded-full bg-pink-600 dark:bg-pink-400"
   >
-    <CompanyIcon class="text-gray-white size-5 dark:text-pink-100" />
+    <CompanyIcon class="size-5 text-pink-50 dark:text-slate-950" />
   </span>
 
   <header class="lg:w-2/5">
     <h3
-      class="mb-2 flex items-center text-xl font-bold text-gray-900 dark:text-pink-400"
+      class="mb-2 flex items-center text-xl font-bold text-pink-600 dark:text-pink-400"
     >
       {title}
     </h3>
 
-    <h4 class="mb-1 text-xl font-semibold">
+    <h4 class="mb-1 text-xl font-semibold text-gray-600 dark:text-white">
       <a
         class="hover:underline"
         href="https://www.info.fractalup.com/"
@@ -62,7 +62,7 @@ const dateRange = `${new Date(startDate).toLocaleDateString("en-US", {
     </h4>
 
     <time
-      class="mb-3 block text-sm font-normal leading-none text-gray-400 lg:mb-5 dark:text-white/80"
+      class="mb-3 block text-sm font-normal leading-none text-gray-600/80 lg:mb-5 dark:text-white/80"
     >
       {dateRange}
     </time>
