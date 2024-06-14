@@ -1,19 +1,19 @@
 ---
+import SectionContainer from "@components/SectionContainer.astro";
+import SectionTitle from "@components/SectionTitle.astro";
+
 interface Props {
-  class?: string;
-  id?: string;
+  component?: () => Promise<(_props: Record<string, any>) => any>;
+  icon?: () => Promise<(_props: Record<string, any>) => any>;
+  id: string;
+  title: string;
 }
 
-const { class: className, id } = Astro.props;
+const { component, icon, id, title } = Astro.props;
+const Component = await component?.();
 ---
 
-<section
-  id={id}
-  data-section={id}
-  class:list={[
-    `mx-auto w-full scroll-m-20 md:max-w-2xl lg:max-w-4xl`,
-    `${className}`,
-  ]}
->
-  <slot />
-</section>
+<SectionContainer id={id}>
+  <SectionTitle title={title} icon={icon} />
+  {Component && <Component />}
+</SectionContainer>

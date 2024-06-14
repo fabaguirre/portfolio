@@ -1,7 +1,7 @@
 ---
-import { SECTIONS } from "@config/constants";
+import { PAGE_SECTIONS } from "@config/constants";
 
-const navItems = SECTIONS;
+const navItems = PAGE_SECTIONS;
 ---
 
 <header
@@ -10,7 +10,7 @@ const navItems = SECTIONS;
   <nav class="flex items-center justify-center gap-4 text-sm font-medium">
     {
       navItems.map((link) => (
-        <a aria-label={link.title} href={`#${link.id}` ?? link.href}>
+        <a aria-label={link.title} href={`#${link.id}`}>
           {link.title}
         </a>
       ))

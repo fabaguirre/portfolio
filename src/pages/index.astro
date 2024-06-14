@@ -1,15 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import PageSection from "@components/PageSection.astro";
-import SectionTitle from "@components/SectionTitle.astro";
+import SectionContainer from "@components/SectionContainer.astro";
 
-import { SECTIONS } from "@config/constants";
-
-const sectionPromises = SECTIONS.map(async ({ component, ...rest }) => ({
-  ...rest,
-  Component: await component(),
-}));
-const sections = await Promise.all(sectionPromises);
+import { PAGE_SECTIONS } from "@config/constants";
 ---
 
 <Layout
@@ -17,21 +11,23 @@ const sections = await Promise.all(sectionPromises);
   description="Desarrollador Fullstack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos."
 >
   <main class="px-4">
-    <PageSection class="py-16 md:py-36">
+    <SectionContainer class="py-16 md:py-36">
       <h1 class="text-4xl font-bold">Welcome to Astro</h1>
       <p class="text-lg">
         Astro is a new kind of static site builder that delivers lightning-fast
         performance with a modern developer experience.
       </p>
-    </PageSection>
+    </SectionContainer>
 
     <div class="space-y-24">
       {
-        sections.map(({ icon, id, title, Component }) => (
-          <PageSection id={id}>
-            <SectionTitle title={title} icon={icon} />
-            <Component />
-          </PageSection>
+        PAGE_SECTIONS.map(({ component, icon, id, title }) => (
+          <PageSection
+            component={component}
+            icon={icon}
+            id={id}
+            title={title}
+          />
         ))
       }
     </div>

@@ -16,7 +16,7 @@ export const profileData = {
   },
 };
 
-export const SECTIONS = [
+export const PAGE_SECTIONS = [
   {
     id: "experience",
     title: "Experience",
@@ -41,8 +41,7 @@ export const SECTIONS = [
   {
     id: "contact",
     title: "Contact",
-    href: profileData.mailto,
-    icon: () => import("@icons/Express.astro").then((mod) => mod.default),
+    icon: () => import("@icons/AddressBook.astro").then((mod) => mod.default),
     component: () =>
       import("@icons/Briefcase.astro").then((mod) => mod.default),
   },
