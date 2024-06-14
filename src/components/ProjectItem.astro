@@ -23,7 +23,7 @@ const imageHoverClass = reverse
   : "[&:hover>img]:translate-x-4";
 ---
 
-<article class:list={[`flex flex-col gap-4 md:gap-8`, rowClass]}>
+<article class:list={[`flex flex-col gap-4 md:items-start md:gap-8`, rowClass]}>
   <div
     class:list={[
       "relative aspect-video overflow-hidden rounded-md bg-[url('/background/light.webp')] bg-cover bg-left-top md:w-1/2 dark:bg-[url('/background/dark.webp')] [&:hover>img]:-translate-y-4",
