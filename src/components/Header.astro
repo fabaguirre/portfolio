@@ -15,8 +15,9 @@ const navItems = PAGE_SECTIONS;
       navItems.map((link) => (
         <a
           aria-label={link.title}
-          href={`#${link.id}`}
+          data-id={link.id}
           class="text-balance text-center"
+          href={`#${link.id}`}
         >
           {link.title}
         </a>
@@ -25,6 +26,49 @@ const navItems = PAGE_SECTIONS;
     <ThemeToggle class="[display:none]" />
   </nav>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems =
+      document.querySelectorAll<HTMLAnchorElement>("header nav a");
+
+    function updateNavItems(currentSectionId: string) {
+      navItems.forEach((navItem) => {
+        if (navItem.dataset.id === currentSectionId) {
+          navItem.classList.add("text-pink-300", "dark:text-pink-300");
+        } else {
+          navItem.classList.remove("text-pink-300", "dark:text-pink-300");
+        }
+      });
+    }
+
+    function observerCallback(entries: IntersectionObserverEntry[]) {
+      entries.some((entry) => {
+        if (entry.isIntersecting) {
+          updateNavItems(entry.target.id);
+        }
+        return entry.isIntersecting;
+      });
+    }
+
+    const observer = new IntersectionObserver(observerCallback, {
+      root: null, // Use the viewport as the container
+      rootMargin: "0px",
+      threshold: 0.5, // Adjust threshold as needed
+    });
+
+    sections.forEach((section) => observer.observe(section));
+
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => observer.observe(section));
+      }
+    };
+  });
+</script>
 
 <style>
   nav {
