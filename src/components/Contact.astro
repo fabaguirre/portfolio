@@ -1,0 +1,54 @@
+---
+import { PROFILE_DATA } from "@config/constants";
+
+import GitHubIcon from "@icons/GitHub.astro";
+import GitlabIcon from "@icons/Gitlab.astro";
+import LinkedInIcon from "@icons/LinkedIn.astro";
+import MailFilledIcon from "@icons/MailFilled.astro";
+
+const {
+  email,
+  socialMedia: { github, gitlab, linkedin },
+} = PROFILE_DATA;
+
+const contactItems = [
+  {
+    href: `mailto:${email}`,
+    icon: MailFilledIcon,
+    text: email,
+  },
+  {
+    href: linkedin.url,
+    icon: LinkedInIcon,
+    text: `/${linkedin.username}`,
+  },
+  {
+    href: github.url,
+    icon: GitHubIcon,
+    text: `/${github.username}`,
+  },
+  {
+    href: gitlab.url,
+    icon: GitlabIcon,
+    text: `/${gitlab.username}`,
+  },
+];
+---
+
+<ul class="mt-16 grid grid-cols-2 gap-10 text-sm">
+  {
+    contactItems.map(({ href, icon: Icon, text }) => (
+      <li class="flex items-center gap-4">
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 opacity-70 transition-opacity hover:underline hover:opacity-100"
+        >
+          <Icon class="size-6" />
+          <span>{text}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

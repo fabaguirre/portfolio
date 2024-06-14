@@ -10,7 +10,10 @@ import { PROFILE_DATA } from "@config/constants";
 const {
   names: { firstName, lastName, callName },
   titles,
-  socialMedia: { github, linkedin },
+  socialMedia: {
+    github,
+    linkedin: { url: linkedinUrl },
+  },
 } = PROFILE_DATA;
 const personalImageAlt = `Foto de ${firstName} ${lastName}`;
 
@@ -29,7 +32,7 @@ const formatedTitles = formatter.format(titles);
       alt={personalImageAlt}
     />
     <a
-      href={linkedin}
+      href={linkedinUrl}
       target="_blank"
       rel="noopener noreferrer"
       class="flex items-center"
@@ -62,7 +65,7 @@ const formatedTitles = formatter.format(titles);
       GitHub
     </SocialPill>
 
-    <SocialPill href={linkedin}>
+    <SocialPill href={linkedinUrl}>
       <LinkedIn class="size-4" />
       LinkedIn
     </SocialPill>

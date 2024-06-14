@@ -6,15 +6,24 @@ export const PROFILE_DATA = {
     lastName: "Aguirre",
   },
   email: "faguirrecruz@hotmail.com",
-  mailto: "mailto:faguirrecruz@hotmail.com",
   titles: [
     "Software Engineer",
     // "Frontend Developer",
     "Full Stack Developer",
   ],
   socialMedia: {
-    linkedin: "https://www.linkedin.com/in/fabaguirre",
-    github: "https://github.com/fabaguirre",
+    linkedin: {
+      url: "https://www.linkedin.com/in/fabaguirre/",
+      username: "fabaguirre",
+    },
+    github: {
+      url: "https://github.com/fabaguirre",
+      username: "fabaguirre",
+    },
+    gitlab: {
+      url: "https://gitlab.com/fabaguirre",
+      username: "fabaguirre",
+    },
   },
 };
 
@@ -45,6 +54,6 @@ export const PAGE_SECTIONS = [
     title: "Contacto",
     icon: () => import("@icons/AddressBook.astro").then((mod) => mod.default),
     component: () =>
-      import("@icons/Briefcase.astro").then((mod) => mod.default),
+      import("@components/Contact.astro").then((mod) => mod.default),
   },
 ];
