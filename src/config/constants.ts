@@ -1,6 +1,4 @@
-import { experimental_AstroContainer } from "astro/container";
-
-export const profileData = {
+export const PROFILE_DATA = {
   names: {
     firstName: "Fabrizio",
     callName: "Fab",
@@ -9,7 +7,11 @@ export const profileData = {
   },
   email: "faguirrecruz@hotmail.com",
   mailto: "mailto:faguirrecruz@hotmail.com",
-  titles: ["Software Engineer", "Frontend Developer", "Full Stack Developer"],
+  titles: [
+    "Software Engineer",
+    // "Frontend Developer",
+    "Full Stack Developer",
+  ],
   socialMedia: {
     linkedin: "https://www.linkedin.com/in/fabaguirre",
     github: "https://github.com/fabaguirre",
