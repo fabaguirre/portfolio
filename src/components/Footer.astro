@@ -1,5 +1,5 @@
 ---
-import { PROFILE_DATA } from "@config/constants";
+import { PAGE_SECTIONS, PROFILE_DATA } from "@config/constants";
 
 const currentYear = new Date().getFullYear();
 const {
@@ -21,11 +21,14 @@ const {
   <ul
     class="flex flex-col gap-1.5 font-medium md:flex-row md:gap-5 dark:text-white/90"
   >
-    <li>
-      <a href="/#about" class="hover:underline">Sobre mí</a>
-    </li>
-    <li>
-      <a href={mailto} class="hover:underline"> Contacto </a>
-    </li>
+    {
+      PAGE_SECTIONS.map((link) => (
+        <li>
+          <a href={`#${link.id}`} class="hover:underline">
+            {link.title}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </footer>

@@ -21,28 +21,28 @@ export const PROFILE_DATA = {
 export const PAGE_SECTIONS = [
   {
     id: "experience",
-    title: "Experience",
+    title: "Experiencia",
     icon: () => import("@icons/Briefcase.astro").then((mod) => mod.default),
     component: () =>
       import("@components/Experience.astro").then((mod) => mod.default),
   },
   {
     id: "projects",
-    title: "Projects",
+    title: "Proyectos",
     icon: () => import("@icons/SourceCode.astro").then((mod) => mod.default),
     component: () =>
       import("@icons/Briefcase.astro").then((mod) => mod.default),
   },
   {
     id: "about",
-    title: "About",
+    title: "Acerca de mi",
     icon: () => import("@icons/UserSquare.astro").then((mod) => mod.default),
     component: () =>
       import("@icons/Briefcase.astro").then((mod) => mod.default),
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Contacto",
     icon: () => import("@icons/AddressBook.astro").then((mod) => mod.default),
     component: () =>
       import("@icons/Briefcase.astro").then((mod) => mod.default),
