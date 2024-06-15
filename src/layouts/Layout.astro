@@ -11,7 +11,8 @@ interface Props {
 const { currentLocale } = Astro;
 const { title, description } = Astro.props;
 
-const previewUrl = "/preview.webp";
+const previewUrl =
+  currentLocale === "en" ? "/preview_en.webp" : "/preview.webp";
 const url = "https://fabos.dev";
 ---
 
