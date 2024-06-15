@@ -14,7 +14,7 @@ const { t } = useTranslation(currentLocale);
 
 const {
   socialMedia: {
-    github,
+    github: { url: githubUrl },
     linkedin: { url: linkedinUrl },
   },
 } = PROFILE_DATA;
@@ -51,7 +51,7 @@ const {
   />
 
   <nav class="mt-8 flex flex-wrap gap-4">
-    <SocialPill href={github}>
+    <SocialPill href={githubUrl}>
       <GitHub class="size-4" />
       GitHub
     </SocialPill>
