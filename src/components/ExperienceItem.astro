@@ -10,6 +10,7 @@ interface Props {
   isCurrent?: boolean;
 }
 
+const { currentLocale } = Astro;
 const {
   companyIcon: CompanyIcon,
   title,
@@ -31,7 +32,7 @@ const typeClass = {
 const typeColor = typeClass[type];
 
 function formatDate(date: string) {
-  return new Date(date).toLocaleDateString("es", {
+  return new Date(date).toLocaleDateString(currentLocale, {
     month: "long",
     year: "numeric",
   });

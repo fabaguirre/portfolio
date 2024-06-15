@@ -1,4 +1,5 @@
 ---
+import { useTranslation } from "@/i18n";
 import ProjectItem from "@components/ProjectItem.astro";
 
 import AWSIcon from "@icons/Aws.astro";
@@ -9,6 +10,9 @@ import NodeJSIcon from "@icons/NodeJS.astro";
 import PrismaIcon from "@icons/Prisma.astro";
 import TypescriptIcon from "@icons/Typescript.astro";
 import VueIcon from "@icons/Vue.astro";
+
+const { currentLocale } = Astro;
+const { t } = useTranslation(currentLocale);
 
 const TECHNOLOGIES = {
   AWS: {
@@ -56,9 +60,8 @@ const TECHNOLOGIES = {
 
 const projects = [
   {
-    title: "FractalUp | All-in-One Metaverse",
-    description:
-      "FractalUp es una plataforma de red todo en uno que ofrece SuperApps autoconfigurables. Optimiza el compromiso y la productividad en diversos sectores, como marketing y formación, creando comunidades online activas y aumentando la fidelización sin necesidad de código.",
+    title: t("projects.fractalup.title"),
+    description: t("projects.fractalup.description"),
     link: "https://fractalup.com/",
     image: "fractalup.webp",
     technologies: [
@@ -68,9 +71,8 @@ const projects = [
     ],
   },
   {
-    title: "Medical Appointment App",
-    description:
-      "Una aplicación de gestión de citas médicas diseñada para profesionales sanitarios. Permite a los médicos y al personal sanitario gestionar eficazmente las citas con sus pacientes.",
+    title: t("projects.med_appt_app.title"),
+    description: t("projects.med_appt_app.description"),
     image: "med_appt.webp",
     technologies: [
       TECHNOLOGIES.VUE,

@@ -8,6 +8,7 @@ interface Props {
   description: string;
 }
 
+const { currentLocale } = Astro;
 const { title, description } = Astro.props;
 
 const previewUrl = "/preview.webp";
@@ -15,7 +16,7 @@ const url = "https://fabos.dev";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

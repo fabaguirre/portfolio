@@ -1,11 +1,11 @@
 ---
+import { useTranslation } from "@/i18n";
 import { PROFILE_DATA } from "@config/constants";
 
-const {
-  names: { firstName, lastName, callName },
-} = PROFILE_DATA;
+const { currentLocale } = Astro;
+const { t } = useTranslation(currentLocale);
 
-const personalImageAlt = `Foto de ${firstName} ${lastName}`;
+const description = t("about.description");
 ---
 
 <article
@@ -14,36 +14,11 @@ const personalImageAlt = `Foto de ${firstName} ${lastName}`;
   <div
     class="space-y-5 text-pretty [&>p>strong]:font-mono [&>p>strong]:font-normal [&>p>strong]:text-pink-500 dark:[&>p>strong]:text-pink-200"
   >
-    <p>
-      Hola, soy {firstName}, pero me conocen como <em>"{callName}"</em>. Con una
-      pasión por el desarrollo de software, he trabajado como Fullstack
-      Developer y también
-      <strong>gestionando proyectos tecnológicos</strong>. En los últimos meses,
-      como freelance, me he especializado en frontend y backend utilizando
-      Node.js, Express, MySQL y Vue.js.
-    </p>
-
-    <p>
-      He creado y mantenido aplicaciones completas, optimizando el rendimiento y
-      la experiencia del usuario. Esta experiencia me ha permitido <strong
-        >liderar equipos en la entrega de soluciones tecnológicas</strong
-      >, gestionando eficazmente recursos y plazos para cumplir con los
-      objetivos establecidos.
-    </p>
-
-    <p>
-      Fuera del trabajo, disfruto explorando nuevas culturas a través de mis
-      viajes internacionales. Esta pasión por la aventura no solo enriquece mi
-      vida personal, sino que también fortalece mi capacidad para adaptarme
-      rápidamente a diferentes entornos y desafíos. Estoy emocionado por seguir
-      creciendo en mi carrera, <strong
-        >buscando nuevas oportunidades que me desafíen
-      </strong> y me permitan continuar aprendiendo y evolucionando como profesional.
-    </p>
+    {description.map((paragraph) => <p set:html={paragraph} />)}
   </div>
 
   <img
-    alt={personalImageAlt}
+    alt={t("about.alt")}
     class="aspect-square w-60 rotate-3 rounded-2xl bg-blue-500/5 p-2 ring-1 ring-blue-900 md:w-72 dark:ring-blue-200/50"
     loading="lazy"
     src="/me.webp"

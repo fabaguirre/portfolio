@@ -6,22 +6,18 @@ import GitHub from "@icons/GitHub.astro";
 import LinkedIn from "@icons/LinkedIn.astro";
 
 import { PROFILE_DATA } from "@config/constants";
+import { useTranslation } from "@/i18n";
+
+const { currentLocale } = Astro;
+
+const { t } = useTranslation(currentLocale);
 
 const {
-  names: { firstName, lastName, callName },
-  titles,
   socialMedia: {
     github,
     linkedin: { url: linkedinUrl },
   },
 } = PROFILE_DATA;
-const personalImageAlt = `Foto de ${firstName} ${lastName}`;
-
-const formatter = new Intl.ListFormat("es", {
-  style: "long",
-  type: "conjunction",
-});
-const formatedTitles = formatter.format(titles);
 ---
 
 <div class="max-w-xl">
@@ -29,7 +25,7 @@ const formatedTitles = formatter.format(titles);
     <img
       class="size-16 rounded-full shadow-lg"
       src="/fab.webp"
-      alt={personalImageAlt}
+      alt={t("hero.alt")}
     />
     <a
       href={linkedinUrl}
@@ -37,27 +33,22 @@ const formatedTitles = formatter.format(titles);
       rel="noopener noreferrer"
       class="flex items-center"
     >
-      <Badge>Disponible para trabajar</Badge>
+      <Badge>
+        {t("hero.badge")}
+      </Badge>
     </a>
   </div>
 
   <h1
     class="mt-4 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    Hey, soy {callName}
+    {t("hero.title")}
   </h1>
 
   <p
     class="mt-6 text-pretty text-xl text-gray-800 dark:text-gray-300 [&>strong]:font-semibold [&>strong]:text-pink-500 dark:[&>strong]:text-pink-200"
-  >
-    +3 años de experiencia.
-    <strong> {formatedTitles} </strong>
-    de Perú 🇵🇪. Especializado en
-    <span class="font-medium text-[#42b883]">Vue.js</span>
-    para frontend y
-    <span class="font-medium text-[#68A063]">Node.js</span>
-    para backend.
-  </p>
+    set:html={t("hero.description")}
+  />
 
   <nav class="mt-8 flex flex-wrap gap-4">
     <SocialPill href={github}>

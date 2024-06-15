@@ -1,17 +1,21 @@
 ---
+import { useTranslation } from "@/i18n";
 import Layout from "@/layouts/Layout.astro";
 
 import Hero from "@components/Hero.astro";
 import PageSection from "@components/PageSection.astro";
 import SectionContainer from "@components/SectionContainer.astro";
 
-import { PAGE_SECTIONS } from "@config/constants";
+import { useSections } from "@config/constants";
+
+const { currentLocale } = Astro;
+
+const { t } = useTranslation(currentLocale);
+
+const PAGE_SECTIONS = useSections({ currentLocale });
 ---
 
-<Layout
-  title="Fab | Fullstack Developer"
-  description="Desarrollador Fullstack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos."
->
+<Layout title={t("meta.title")} description={t("meta.description")}>
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
       <Hero />

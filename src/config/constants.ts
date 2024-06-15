@@ -1,3 +1,5 @@
+import { useTranslation } from "@/i18n";
+
 export const PROFILE_DATA = {
   names: {
     firstName: "Fabrizio",
@@ -6,11 +8,6 @@ export const PROFILE_DATA = {
     lastName: "Aguirre",
   },
   email: "faguirrecruz@hotmail.com",
-  titles: [
-    "Software Engineer",
-    // "Frontend Developer",
-    "Full Stack Developer",
-  ],
   socialMedia: {
     linkedin: {
       url: "https://www.linkedin.com/in/fabaguirre/",
@@ -27,9 +24,9 @@ export const PROFILE_DATA = {
   },
 };
 
-export const PAGE_SECTIONS = [
+const PAGE_SECTIONS = [
   {
-    id: "experience",
+    id: "experiences",
     title: "Experiencia",
     icon: () => import("@icons/Briefcase.astro").then((mod) => mod.default),
     component: () =>
@@ -57,3 +54,12 @@ export const PAGE_SECTIONS = [
       import("@components/Contact.astro").then((mod) => mod.default),
   },
 ];
+
+export function useSections({ currentLocale }: { currentLocale?: string }) {
+  const { t } = useTranslation(currentLocale);
+  return PAGE_SECTIONS.map((section) => ({
+    ...section,
+    // @ts-ignore
+    title: t(`${section.id}.title`) as string,
+  }));
+}

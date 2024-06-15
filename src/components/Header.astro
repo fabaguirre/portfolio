@@ -1,8 +1,10 @@
 ---
-import { PAGE_SECTIONS } from "@config/constants";
+import { useSections } from "@config/constants";
 import ThemeToggle from "@components/ThemeToggle.astro";
 
-const navItems = PAGE_SECTIONS;
+const { currentLocale } = Astro;
+
+const navItems = useSections({ currentLocale });
 ---
 
 <header

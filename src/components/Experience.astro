@@ -3,34 +3,30 @@ import ExperienceItem from "@components/ExperienceItem.astro";
 
 import FractalUpIcon from "@icons/FractalUp.astro";
 
+import { useTranslation } from "@/i18n";
+
+const { currentLocale } = Astro;
+
+const { t } = useTranslation(currentLocale);
+
 const experience = [
   {
-    title: "Software Project Manager",
+    title: t("experiences.fractalup_project_manager.title"),
     company: "FractalUp",
     companyIcon: FractalUpIcon,
     type: "remote" as const,
     startDate: "2022-03-01 00:00:00",
     endDate: "2024-02-01 00:00:00",
-    description: [
-      "Durante mi tiempo en FractalUp, trabajé como Project Software Manager, contribuyendo significativamente al éxito del equipo. Me especialicé en programación con TypeScript Vue, enfocándome en resolver tareas desafiantes para el equipo.",
-      "Lideré el análisis y diseño de nuevas funcionalidades, creando diagramas de flujo, diagramas de clase y estructuras de tablas en la base de datos para guiar el desarrollo. También organicé y coordiné tareas para los programadores, asegurando el cumplimiento de los plazos establecidos.",
-      "Desarrollé características clave como analítica del sitio web, chat de mensajería, flujo completo de inicio de sesión y registro de usuarios, y perfil de usuario. Estas tareas me dieron una comprensión integral del desarrollo de software.",
-      "Esta experiencia fortaleció mis habilidades técnicas y mejoró mis capacidades de liderazgo y organización, permitiéndome gestionar proyectos complejos y garantizar entregas eficientes.",
-    ],
-    isCurrent: true,
+    description: t("experiences.fractalup_project_manager.description"),
   },
   {
-    title: "Fullstack Developer",
+    title: t("experiences.fractalup_fullstack.title"),
     company: "FractalUp",
     companyIcon: FractalUpIcon,
     type: "remote" as const,
     startDate: "2021-02-01 00:00:00",
     endDate: "2022-02-01 00:00:00",
-    description: [
-      "Desarrollé componentes de UI para una biblioteca de componentes y para el resto de la aplicación utilizando Vue.js y TypeScript, asegurando su calidad mediante pruebas con Jest.",
-      "Implementé integraciones API con GraphQL, mejorando el uso de la caché de Apollo para minimizar la cantidad de peticiones al servidor y optimizar el rendimiento.",
-      "Mantuve y actualicé continuamente la base de código para adaptarse a los cambios y mejoras necesarias, asegurando la estabilidad y eficiencia del sistema.",
-    ],
+    description: t("experiences.fractalup_fullstack.description"),
   },
 ];
 ---

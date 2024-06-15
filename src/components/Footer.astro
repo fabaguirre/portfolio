@@ -1,10 +1,16 @@
 ---
-import { PAGE_SECTIONS, PROFILE_DATA } from "@config/constants";
+import { useTranslation } from "@/i18n";
+import { useSections, PROFILE_DATA } from "@config/constants";
+
+const { currentLocale } = Astro;
+const { t } = useTranslation(currentLocale);
 
 const currentYear = new Date().getFullYear();
 const {
   names: { socialNickname },
 } = PROFILE_DATA;
+
+const PAGE_SECTIONS = useSections({ currentLocale });
 ---
 
 <footer
@@ -14,7 +20,7 @@ const {
     © {currentYear}
     <a href="https://fabos.dev/" class="hover:underline" target="_blank">
       {socialNickname}
-    </a>. ¡Ten un bonito día! 🎉
+    </a>. {t("footer.greeting")}
   </span>
 
   <ul class="flex flex-row gap-5 font-medium dark:text-white/90">
