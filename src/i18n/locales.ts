@@ -27,7 +27,7 @@ const es = {
   experiences: {
     title: "Experiencia",
     fractalup_project_manager: {
-      title: "Project Manager",
+      title: "Software Project Manager",
       description: [
         "Durante mi tiempo en FractalUp, trabajé como Project Software Manager, contribuyendo significativamente al éxito del equipo. Me especialicé en programación con TypeScript Vue, enfocándome en resolver tareas desafiantes para el equipo.",
         "Lideré el análisis y diseño de nuevas funcionalidades, creando diagramas de flujo, diagramas de clase y estructuras de tablas en la base de datos para guiar el desarrollo. También organicé y coordiné tareas para los programadores, asegurando el cumplimiento de los plazos establecidos.",
@@ -36,7 +36,7 @@ const es = {
       ],
     },
     fractalup_fullstack: {
-      title: "Software Project Manager",
+      title: "Desarrollador Fullstack",
       description: [
         "Desarrollé componentes de UI para una biblioteca de componentes y para el resto de la aplicación utilizando Vue.js y TypeScript, asegurando su calidad mediante pruebas con Jest.",
         "Implementé integraciones API con GraphQL, mejorando el uso de la caché de Apollo para minimizar la cantidad de peticiones al servidor y optimizar el rendimiento.",
