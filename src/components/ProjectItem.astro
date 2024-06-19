@@ -26,7 +26,7 @@ const imageHoverClass = reverse
 ---
 
 <article class:list={[`flex flex-col gap-4 md:items-start md:gap-8`, rowClass]}>
-  <div
+  <figure
     class:list={[
       "relative aspect-video overflow-hidden rounded-md bg-[url('/background/light.webp')] bg-cover bg-left-top md:w-1/2 dark:bg-[url('/background/dark.webp')] [&:hover>img]:-translate-y-4",
       imageHoverClass,
@@ -41,7 +41,7 @@ const imageHoverClass = reverse
       ]}
       loading="lazy"
     />
-  </div>
+  </figure>
 
   <div class="space-y-6 md:w-1/2">
     <header>
