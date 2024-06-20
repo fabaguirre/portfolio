@@ -35,18 +35,18 @@ const contactItems = [
 ];
 ---
 
-<ul class="mt-16 grid grid-cols-2 gap-10 text-sm">
+<ul class="mt-16 grid grid-cols-2 gap-4 gap-y-10 text-sm">
   {
     contactItems.map(({ href, icon: Icon, text }) => (
-      <li class="flex items-center gap-4">
+      <li>
         <a
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 hover:underline"
+          class="grid grid-cols-[auto,1fr] items-center gap-2 hover:underline"
         >
           <Icon class="size-6 opacity-75 dark:opacity-90" />
-          <span>{text}</span>
+          <span class="overflow-hidden text-ellipsis">{text}</span>
         </a>
       </li>
     ))

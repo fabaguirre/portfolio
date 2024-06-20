@@ -1,5 +1,7 @@
 ---
 import { useSections } from "@config/constants";
+
+import LanguageSelector from "@components/LanguageSelector.astro";
 import ThemeToggle from "@components/ThemeToggle.astro";
 
 const { currentLocale } = Astro;
@@ -18,14 +20,19 @@ const navItems = useSections({ currentLocale });
         <a
           aria-label={link.title}
           data-id={link.id}
-          class="text-balance text-center"
+          class="text-nowrap text-center max-sm:overflow-hidden max-sm:text-ellipsis"
           href={`#${link.id}`}
         >
           {link.title}
         </a>
       ))
     }
-    <ThemeToggle class="[display:none]" />
+
+    <div class="flex items-center gap-2">
+      <LanguageSelector class="max-sm:hidden" />
+      <span class="max-sm:hidden">|</span>
+      <ThemeToggle />
+    </div>
   </nav>
 </header>
 

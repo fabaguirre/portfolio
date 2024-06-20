@@ -1,0 +1,61 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class:list={[`btnMenu relative`, `${className}`]}>
+  <button
+    class="flex appearance-none border-none transition hover:scale-125 [&>svg:not(:first-of-type)]:absolute"
+  >
+    <slot />
+  </button>
+
+  <dialog
+    class="top-8 mr-8 min-w-32 rounded-md border border-gray-100 bg-gray-100 p-1 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] dark:border-gray-500/20 dark:bg-gray-500"
+    open
+  >
+    <menu>
+      <slot name="menu" />
+    </menu>
+  </dialog>
+</div>
+
+<style>
+  dialog[open] {
+    display: inline;
+    animation: scale-up-center 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes scale-up-center {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  const btnMenus = document.querySelectorAll(".btnMenu");
+  const dialogs = document.querySelectorAll("dialog");
+
+  const closeAllDialogs = () => dialogs.forEach((d) => d?.close());
+
+  btnMenus.forEach((bm) => {
+    const dialog = bm.querySelector("dialog");
+    const button = bm.querySelector("button");
+
+    button?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeAllDialogs();
+      dialog?.show();
+    });
+
+    dialog?.close();
+  });
+
+  document.addEventListener("click", closeAllDialogs);
+</script>
