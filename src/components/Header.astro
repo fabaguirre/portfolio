@@ -20,7 +20,7 @@ const navItems = useSections({ currentLocale });
         <a
           aria-label={link.title}
           data-id={link.id}
-          class="text-balance text-center"
+          class="text-nowrap text-center max-sm:overflow-hidden max-sm:text-ellipsis"
           href={`#${link.id}`}
         >
           {link.title}
@@ -29,8 +29,8 @@ const navItems = useSections({ currentLocale });
     }
 
     <div class="flex items-center gap-2">
-      <LanguageSelector />
-      <span>|</span>
+      <LanguageSelector class="max-sm:hidden" />
+      <span class="max-sm:hidden">|</span>
       <ThemeToggle />
     </div>
   </nav>

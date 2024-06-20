@@ -1,4 +1,8 @@
-<div class="btnMenu relative">
+---
+const { class: className } = Astro.props;
+---
+
+<div class:list={[`btnMenu relative`, `${className}`]}>
   <button
     class="flex appearance-none border-none transition hover:scale-125 [&>svg:not(:first-of-type)]:absolute"
   >

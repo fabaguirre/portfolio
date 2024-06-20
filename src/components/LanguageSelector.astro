@@ -16,13 +16,16 @@ const LANGUAGES = [
   },
 ];
 
-const { currentLocale = "es" } = Astro;
+const {
+  currentLocale = "es",
+  props: { class: className },
+} = Astro;
 
 const currentLanguage =
   LANGUAGES.find((lang) => lang.value === currentLocale) ?? LANGUAGES[0];
 ---
 
-<ButtonMenu>
+<ButtonMenu class:list={className}>
   <Fragment>
     <span class="sr-only">Elige el idioma</span>
 
