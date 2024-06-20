@@ -27,9 +27,10 @@
     "@typescript-eslint/parser": "^7.13.0",
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^1.2.2",
-    "prettier-plugin-tailwindcss": "^0.6.4",
-    "typescript": "^5.4.5",
     "prettier": "^3.3.2",
-    "prettier-plugin-astro": "^0.14.0"
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-tailwindcss": "^0.6.4",
+    "tailwindcss-theme-variants": "^2.0.0-beta.0",
+    "typescript": "^5.4.5"
   }
 }
