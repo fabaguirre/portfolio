@@ -1,5 +1,7 @@
 ---
 import { useSections } from "@config/constants";
+
+import LanguageSelector from "@components/LanguageSelector.astro";
 import ThemeToggle from "@components/ThemeToggle.astro";
 
 const { currentLocale } = Astro;
@@ -25,7 +27,12 @@ const navItems = useSections({ currentLocale });
         </a>
       ))
     }
-    <ThemeToggle class="[display:none]" />
+
+    <div class="flex items-center gap-2">
+      <LanguageSelector />
+      <span>|</span>
+      <ThemeToggle />
+    </div>
   </nav>
 </header>
 

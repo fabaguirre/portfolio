@@ -1,0 +1,49 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+import ButtonMenu from "@components/ButtonMenu.astro";
+
+import LanguageIcon from "@icons/Language.astro";
+
+const LANGUAGES = [
+  {
+    value: "es",
+    name: "Español",
+  },
+  {
+    value: "en",
+    name: "English",
+  },
+];
+
+const { currentLocale = "es" } = Astro;
+
+const currentLanguage =
+  LANGUAGES.find((lang) => lang.value === currentLocale) ?? LANGUAGES[0];
+---
+
+<ButtonMenu>
+  <Fragment>
+    <span class="sr-only">Elige el idioma</span>
+
+    <div class="flex items-center gap-1 text-xs uppercase">
+      <LanguageIcon />
+      {currentLanguage.value}
+    </div>
+  </Fragment>
+
+  <Fragment slot="menu">
+    {
+      LANGUAGES.map((lang) => (
+        <li>
+          <a
+            class="block w-full rounded px-2 py-1.5 text-start hover:bg-black/10 dark:hover:bg-black/20"
+            href={getRelativeLocaleUrl(lang.value)}
+          >
+            {lang.name}
+          </a>
+        </li>
+      ))
+    }
+  </Fragment>
+</ButtonMenu>
