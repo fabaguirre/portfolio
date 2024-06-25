@@ -8,15 +8,15 @@ const fullName = `${firstName} ${lastName}`;
 
 const es = {
   meta: {
-    title: "Fab | Desarrollador Fullstack",
+    title: "Fab | Desarrollador Full Stack",
     description:
-      "Desarrollador Fullstack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos.",
+      "Desarrollador Full Stack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos.",
   },
   hero: {
     badge: "Disponible para trabajar",
     title: `Hola, soy ${callName}`,
     description: `+3 años de experiencia.
-    <strong> Ingeniero de Software y Desarrollador Fullstack </strong>
+    <strong> Ingeniero de Software y Desarrollador Full Stack </strong>
     de Perú 🇵🇪. Especializado en
     <span class="font-medium text-[#42b883]">Vue.js</span>
     para frontend y
@@ -36,7 +36,7 @@ const es = {
       ],
     },
     fractalup_fullstack: {
-      title: "Desarrollador Fullstack",
+      title: "Desarrollador Full Stack",
       description: [
         "Desarrollé componentes de UI para una biblioteca de componentes y para el resto de la aplicación utilizando Vue.js y TypeScript, asegurando su calidad mediante pruebas con Jest.",
         "Implementé integraciones API con GraphQL, mejorando el uso de la caché de Apollo para minimizar la cantidad de peticiones al servidor y optimizar el rendimiento.",
@@ -62,7 +62,7 @@ const es = {
     description: [
       `<p>
   Hola, soy ${firstName}, pero me conocen como <em>"${callName}"</em>. Con una
-  pasión por el desarrollo de software, he trabajado como Fullstack
+  pasión por el desarrollo de software, he trabajado como Full Stack
   Developer y también
   <strong>gestionando proyectos tecnológicos</strong>. En los últimos meses,
   como freelance, me he especializado en frontend y backend utilizando
@@ -97,15 +97,15 @@ const es = {
 
 const en: DeepPartial<typeof es> = {
   meta: {
-    title: "Fab | Fullstack Developer",
+    title: "Fab | Full Stack Developer",
     description:
-      "Desarrollador Fullstack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos.",
+      "Desarrollador Full Stack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos.",
   },
   hero: {
     badge: "Available for work",
     title: `Hey, I'm ${callName}`,
     description: `+3 years of experience.
-    <strong> Software Engineer and Fullstack Developer </strong>
+    <strong> Software Engineer and Full Stack Developer </strong>
     from Peru 🇵🇪. Specialized in
     <span class="font-medium text-[#42b883]">Vue.js</span>
     for frontend and
@@ -125,7 +125,7 @@ const en: DeepPartial<typeof es> = {
     },
 
     fractalup_fullstack: {
-      title: "Fullstack Developer",
+      title: "Full Stack Developer",
       description: [
         "Developed UI components for a component library and for the rest of the application using Vue.js and TypeScript, ensuring its quality through Jest tests.",
         "Implemented API integrations with GraphQL, improving the use of Apollo cache to minimize the number of requests to the server and optimize performance.",
@@ -151,7 +151,7 @@ const en: DeepPartial<typeof es> = {
     description: [
       `<p>
   Hi, I'm ${firstName}, but I'm known as <em>"${callName}"</em>. With a
-  passion for software development, I have worked as a Fullstack
+  passion for software development, I have worked as a Full Stack
   Developer and also
   <strong>managing technological projects</strong>. In recent months,
   as a freelancer, I have specialized in frontend and backend using
