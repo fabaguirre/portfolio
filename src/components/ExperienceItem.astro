@@ -32,13 +32,14 @@ const typeClass = {
 const typeColor = typeClass[type];
 
 function formatDate(date: string) {
-  return new Date(date).toLocaleDateString(currentLocale, {
+  return new Date(`${date}T00:00:00`).toLocaleDateString(currentLocale, {
     month: "long",
     year: "numeric",
   });
 }
 
-const dateRange = `${formatDate(startDate)} - ${isCurrent ? "Actualidad" : formatDate(endDate)}`;
+const startDateFormatted = formatDate(startDate);
+const endDateFormatted = isCurrent ? "Actualidad" : formatDate(endDate);
 ---
 
 <article class="flex flex-col gap-5 lg:flex-row">
@@ -65,11 +66,18 @@ const dateRange = `${formatDate(startDate)} - ${isCurrent ? "Actualidad" : forma
       </a>
     </h4>
 
-    <time
+    <p
+      aria-label={`Período de trabajo: ${startDateFormatted} - ${endDateFormatted}`}
       class="mb-3 block text-sm font-normal capitalize leading-none light:text-gray-500 lg:mb-5"
     >
-      {dateRange}
-    </time>
+      <time datetime={startDate} class="after:content-['-']">
+        {startDateFormatted}
+      </time>
+      <!--  -->
+      <time datetime={endDate}>
+        {endDateFormatted}
+      </time>
+    </p>
 
     <span
       class:list={[
