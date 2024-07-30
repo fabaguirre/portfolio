@@ -3,7 +3,7 @@ import Technology from "@components/Technology.astro";
 
 interface Props {
   description: string;
-  image: string;
+  imageDirectory: string;
   link?: string;
   reverse?: boolean;
   title: string;
@@ -14,26 +14,40 @@ interface Props {
   }[];
 }
 
-const { description, image, link, reverse, title, technologies } = Astro.props;
+const { description, imageDirectory, link, reverse, title, technologies } =
+  Astro.props;
 
-const projectUrl = `/projects/${image}`;
+const imageBasePath = `/projects/${imageDirectory}`;
+const buildImage = (size: string = "default") =>
+  `${imageBasePath}/${size}.webp`;
+const images = {
+  src: buildImage(),
+  srcSet: [
+    `${buildImage("sm")} 640w`,
+    `${buildImage("md")} 368w`,
+    `${buildImage("lg")} 512w`,
+  ],
+  sizes: "(max-width: 640px) 640px, (max-width: 1024px) 368px, 512px",
+};
 const projectAlt = `Capture of the ${title} website`;
-const rowClass = reverse ? "md:flex-row-reverse" : "md:flex-row";
+const rowClass = reverse ? "sm:flex-row-reverse" : "sm:flex-row";
 const imageClass = reverse ? "start-14" : "end-14";
 const imageHoverClass = reverse
   ? "[&:hover>img]:-translate-x-4"
   : "[&:hover>img]:translate-x-4";
 ---
 
-<article class:list={[`flex flex-col gap-4 md:items-start md:gap-8`, rowClass]}>
+<article class:list={[`flex flex-col gap-4 sm:items-start sm:gap-8`, rowClass]}>
   <figure
     class:list={[
-      "relative aspect-video overflow-hidden rounded-md bg-[#2459fc] bg-[url('/background/light.webp')] bg-cover bg-left-top md:w-1/2 dark:bg-[#2e36cc] dark:bg-[url('/background/dark.webp')] [&:hover>img]:-translate-y-4",
+      "relative aspect-video overflow-hidden rounded-md bg-[#2459fc] bg-[url('/background/light.webp')] bg-cover bg-left-top sm:w-1/2 dark:bg-[#2e36cc] dark:bg-[url('/background/dark.webp')] [&:hover>img]:-translate-y-4",
       imageHoverClass,
     ]}
   >
     <img
-      src={projectUrl}
+      src={images.src}
+      srcset={images.srcSet.join(", ")}
+      sizes={images.sizes}
       alt={projectAlt}
       class:list={[
         "absolute top-14 w-full object-cover drop-shadow-2xl transition-transform duration-500 ease-in-out hover:duration-300",
@@ -43,7 +57,7 @@ const imageHoverClass = reverse
     />
   </figure>
 
-  <div class="space-y-6 md:w-1/2">
+  <div class="space-y-6 sm:w-1/2">
     <header>
       <h3 class="text-2xl font-bold">{title}</h3>
 
