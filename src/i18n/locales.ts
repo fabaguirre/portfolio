@@ -93,6 +93,11 @@ const es = {
   footer: {
     greeting: "¡Ten un bonito día! 🎉",
   },
+  theme: {
+    light: "Claro",
+    dark: "Oscuro",
+    system: "Sistema",
+  },
 };
 
 const en: DeepPartial<typeof es> = {
@@ -180,6 +185,11 @@ const en: DeepPartial<typeof es> = {
   },
   footer: {
     greeting: "Have a nice day! 🎉",
+  },
+  theme: {
+    light: "Light",
+    dark: "Dark",
+    system: "System",
   },
 };
 

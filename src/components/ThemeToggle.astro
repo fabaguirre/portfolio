@@ -1,24 +1,29 @@
 ---
 import ButtonMenu from "@components/ButtonMenu.astro";
 
-import SunIcon from "@icons/Sun.astro";
-import MoonIcon from "@icons/Moon.astro";
 import MacIcon from "@icons/Mac.astro";
+import MoonIcon from "@icons/Moon.astro";
+import SunIcon from "@icons/Sun.astro";
+
+import { useTranslation } from "@/i18n";
+
+const { currentLocale } = Astro;
+const { t } = useTranslation(currentLocale);
 
 const THEMES = [
   {
     value: "light",
-    name: "Claro",
+    name: t("theme.light"),
     Icon: SunIcon,
   },
   {
     value: "dark",
-    name: "Oscuro",
+    name: t("theme.dark"),
     Icon: MoonIcon,
   },
   {
     value: "system",
-    name: "Sistema",
+    name: t("theme.system"),
     Icon: MacIcon,
   },
 ];
