@@ -2,7 +2,7 @@
 import { themeVariants } from "tailwindcss-theme-variants";
 
 export default {
-  content: ["./src/**/*.astro"],
+  content: ["./src/**/*.{astro,ts}"],
   theme: {
     extend: {},
   },
@@ -16,5 +16,4 @@ export default {
     }),
   ],
   darkMode: "selector",
-  purge: ["./src/**/*.astro"],
 };
