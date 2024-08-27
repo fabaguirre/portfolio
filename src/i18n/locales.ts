@@ -15,13 +15,12 @@ const es = {
   hero: {
     badge: "Disponible para trabajar",
     title: `Hola, soy ${callName}`,
-    description: `+3 años de experiencia.
-    <strong> Ingeniero de Software y Desarrollador Full Stack </strong>
-    de Perú 🇵🇪. Especializado en
-    <span class="font-medium text-[#42b883]">Vue.js</span>
-    para frontend y
-    <span class="font-medium text-[#68A063]">Node.js</span>
-    para backend.`,
+    description: `Con más de 4 años de experiencia.
+    <strong>Ingeniero de Software Senior</strong> <small>y</small> <strong>Desarrollador Full Stack</strong>.
+    Basado en Perú 🇵🇪. Actualmente especializado en
+    <span class="font-medium text-[#00ADD8]">Golang</span>
+    y
+    <span class="font-medium text-[#61dbfb]">React Native</span>`,
     alt: `Foto de perfil de ${fullName}`,
   },
   experiences: {
@@ -67,30 +66,10 @@ const es = {
   about: {
     title: "Sobre mí",
     description: [
-      `<p>
-  Hola, soy ${firstName}, pero me conocen como <em>"${callName}"</em>. Con una
-  pasión por el desarrollo de software, he trabajado como Full Stack
-  Developer y también
-  <strong>gestionando proyectos tecnológicos</strong>. En los últimos meses,
-  como freelance, me he especializado en frontend y backend utilizando
-  Node.js, Express, MySQL y Vue.js.
-</p>`,
-      `<p>
-  He creado y mantenido aplicaciones completas, optimizando el rendimiento y
-  la experiencia del usuario. Esta experiencia me ha permitido <strong
-    >liderar equipos en la entrega de soluciones tecnológicas</strong
-  >, gestionando eficazmente recursos y plazos para cumplir con los
-  objetivos establecidos.
-</p>`,
-      `<p>
-  Fuera del trabajo, disfruto explorando nuevas culturas a través de mis
-  viajes internacionales. Esta pasión por la aventura no solo enriquece mi
-  vida personal, sino que también fortalece mi capacidad para adaptarme
-  rápidamente a diferentes entornos y desafíos. Estoy emocionado por seguir
-  creciendo en mi carrera, <strong
-    >buscando nuevas oportunidades que me desafíen
-  </strong> y me permitan continuar aprendiendo y evolucionando como profesional.
-</p>`,
+      `Hola, soy ${firstName}, aunque la mayoría me conoce como <em>"${callName}"</em>. Con <strong>más de 4 años de experiencia</strong> en el desarrollo de software, he trabajado como Full Stack Developer y en la gestión de proyectos tecnológicos. Recientemente, me he especializado en Golang y React Native, con un <strong>enfoque particular en el backend</strong>.
+      `,
+      "He desarrollado y optimizado aplicaciones completas, mejorando tanto el rendimiento como la experiencia del usuario. Esta experiencia me ha permitido <strong>liderar equipos y entregar soluciones tecnológicas efectivas</strong>, gestionando recursos y plazos de manera eficiente.",
+      `Soy una persona muy curiosa, <strong>siempre buscando aprender cosas nuevas</strong>, tanto en tecnología como en otros campos. Uno de mis hobbies es explorar contenido educativo en YouTube, desde ciencia y tecnología hasta arte y deportes. Mi <strong>personalidad lógica</strong> (INTP-A) me permite abordar problemas de manera estructurada, encontrando soluciones eficientes y bien pensadas en mi trabajo.`,
     ],
     alt: `Foto de perfil de ${fullName}`,
   },
@@ -116,13 +95,12 @@ const en: DeepPartial<typeof es> = {
   hero: {
     badge: "Available for work",
     title: `Hey, I'm ${callName}`,
-    description: `+3 years of experience.
-    <strong> Software Engineer and Full Stack Developer </strong>
-    from Peru 🇵🇪. Specialized in
-    <span class="font-medium text-[#42b883]">Vue.js</span>
-    for frontend and
-    <span class="font-medium text-[#68A063]">Node.js</span>
-    for backend.`,
+    description: `4+ years of experience.
+    <strong>Senior Software Engineer</strong> <small>&</small> <strong>Full Stack Developer</strong>.
+    Based in Peru 🇵🇪. Currently specializing in
+    <span class="font-medium text-[#00ADD8]">Golang</span>
+    and
+    <span class="font-medium text-[#61dbfb]">React Native</span>`,
     alt: `Profile picture of ${fullName}`,
   },
   experiences: {
@@ -166,32 +144,20 @@ const en: DeepPartial<typeof es> = {
         "A medical appointment management application designed for healthcare professionals. It allows doctors and healthcare staff to effectively manage appointments with their patients.",
     },
   },
+  /* 
+  
+  Hi, I'm Fabrizio, though most know me as "Fab". With over 4 years of experience in software development, I have worked as a Full Stack Developer and in technology project management. Recently, I’ve specialized in Golang and React Native, with a particular focus on backend development.
+
+I’ve developed and optimized full applications, enhancing both performance and user experience. This experience has allowed me to lead teams and deliver effective technological solutions, managing resources and deadlines efficiently.
+
+I’m a highly curious person, always eager to learn new things, both in technology and other fields. One of my hobbies is exploring educational content on YouTube, from science and technology to art and sports. My logical personality (INTP-A) helps me approach problems in a structured manner, finding efficient and well-thought-out solutions in my work.
+  */
   about: {
     title: "About me",
     description: [
-      `<p>
-  Hi, I'm ${firstName}, but I'm known as <em>"${callName}"</em>. With a
-  passion for software development, I have worked as a Full Stack
-  Developer and also
-  <strong>managing technological projects</strong>. In recent months,
-  as a freelancer, I have specialized in frontend and backend using
-  Node.js, Express, MySQL, and Vue.js.
-</p>`,
-      `<p>
-  I have created and maintained complete applications, optimizing performance
-  and user experience. This experience has allowed me to <strong
-    >lead teams in delivering technological solutions</strong
-  >, effectively managing resources and deadlines to meet the
-  established objectives.
-</p>`,
-      `<p>
-  Outside of work, I enjoy exploring new cultures through my international
-  travels. This passion for adventure not only enriches my personal life, but
-  also strengthens my ability to quickly adapt to different environments and
-  challenges. I am excited to continue growing in my career, <strong
-    >seeking new opportunities that challenge me
-  </strong> and allow me to continue learning and evolving as a professional.
-</p>`,
+      `Hi, I'm ${firstName}, though most know me as <em>"${callName}"</em>. With <strong>over 4 years of experience</strong> in software development, I have worked as a Full Stack Developer and in technology project management. Recently, I’ve specialized in Golang and React Native, with a <strong>particular focus on backend development</strong>`,
+      "I’ve developed and optimized full applications, enhancing both performance and user experience. This experience has allowed me to <strong>lead teams and deliver effective technological solutions</strong>, managing resources and deadlines efficiently.",
+      `I’m a highly curious person, <strong>always eager to learn new things</strong>, both in technology and other fields. One of my hobbies is exploring educational content on YouTube, from science and technology to art and sports. My <strong>logical personality</strong> (INTP-A) helps me approach problems in a structured manner, finding efficient and well-thought-out solutions in my work.`,
     ],
     alt: `Profile picture of ${fullName}`,
   },
