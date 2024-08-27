@@ -44,6 +44,12 @@ const es = {
         "Mantuve y actualicé continuamente la base de código para adaptarse a los cambios y mejoras necesarias, asegurando la estabilidad y eficiencia del sistema.",
       ],
     },
+    encora_senior_software_engineer: {
+      title: "Senior Software Engineer",
+      description: [
+        "Especializado en el sector financiero, utilizo Golang y React Native para desarrollar soluciones innovadoras y eficientes. Mi enfoque está en la creación de aplicaciones seguras y de alto rendimiento, adaptadas a las necesidades del mercado financiero.",
+      ],
+    },
   },
   projects: {
     title: "Proyectos",
@@ -137,6 +143,13 @@ const en: DeepPartial<typeof es> = {
         "Developed UI components for a component library and for the rest of the application using Vue.js and TypeScript, ensuring its quality through Jest tests.",
         "Implemented API integrations with GraphQL, improving the use of Apollo cache to minimize the number of requests to the server and optimize performance.",
         "Continuously maintained and updated the codebase to adapt to necessary changes and improvements, ensuring system stability and efficiency.",
+      ],
+    },
+
+    encora_senior_software_engineer: {
+      title: "Senior Software Engineer",
+      description: [
+        "Specialized in the financial sector, I use Golang and React Native to develop innovative and efficient solutions. My focus is on creating secure and high-performance applications tailored to the needs of the financial market.",
       ],
     },
   },

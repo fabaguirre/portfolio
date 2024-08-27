@@ -2,6 +2,7 @@
 import ExperienceItem from "@components/ExperienceItem.astro";
 
 import FractalUpIcon from "@icons/FractalUp.astro";
+import EncoraIcon from "@icons/Encora.astro";
 
 import { useTranslation } from "@/i18n";
 
@@ -10,6 +11,16 @@ const { currentLocale } = Astro;
 const { t } = useTranslation(currentLocale);
 
 const experience = [
+  {
+    title: t("experiences.encora_senior_software_engineer.title"),
+    company: "Encora Inc.",
+    companyIcon: EncoraIcon,
+    type: "remote" as const,
+    startDate: "2024-09-01",
+    endDate: "2024-09-01",
+    isCurrent: true,
+    description: t("experiences.encora_senior_software_engineer.description"),
+  },
   {
     title: t("experiences.fractalup_project_manager.title"),
     company: "FractalUp",
