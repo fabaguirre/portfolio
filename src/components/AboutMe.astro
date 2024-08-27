@@ -11,7 +11,7 @@ const description = t("about.description");
   class="mt-16 flex flex-col-reverse items-center justify-center gap-10 md:flex-row"
 >
   <div
-    class="space-y-5 text-pretty [&>p>strong]:font-mono [&>p>strong]:font-normal [&>p>strong]:text-pink-800 dark:[&>p>strong]:text-pink-200"
+    class="space-y-5 text-pretty [&>p>strong]:font-mono [&>p>strong]:font-normal [&>p>strong]:text-accent-800 dark:[&>p>strong]:text-accent-300"
   >
     {
       // eslint-disable-next-line astro/no-set-html-directive
@@ -21,7 +21,7 @@ const description = t("about.description");
 
   <img
     alt={t("about.alt")}
-    class="aspect-square w-60 rotate-3 rounded-2xl bg-blue-500/5 p-2 ring-1 ring-blue-900 md:w-72 dark:ring-blue-200/50"
+    class="aspect-square w-60 rotate-3 rounded-2xl p-2 ring-1 ring-purple-900 md:w-72 dark:ring-purple-200/50"
     loading="lazy"
     src="/me.webp"
   />

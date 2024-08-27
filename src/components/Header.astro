@@ -45,9 +45,9 @@ const navItems = useSections({ currentLocale });
     function updateNavItems(currentSectionId: string) {
       navItems.forEach((navItem) => {
         if (navItem.dataset.id === currentSectionId) {
-          navItem.classList.add("text-pink-500", "dark:text-pink-300");
+          navItem.classList.add("text-accent-500", "dark:text-accent-300");
         } else {
-          navItem.classList.remove("text-pink-500", "dark:text-pink-300");
+          navItem.classList.remove("text-accent-500", "dark:text-accent-300");
         }
       });
     }
