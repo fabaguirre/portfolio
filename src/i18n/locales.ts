@@ -26,6 +26,7 @@ const es = {
   },
   experiences: {
     title: "Experiencia",
+    present: "presente",
     fractalup_project_manager: {
       title: "Software Project Manager",
       description: [
@@ -120,6 +121,7 @@ const en: DeepPartial<typeof es> = {
   },
   experiences: {
     title: "Experience",
+    present: "present",
     fractalup_project_manager: {
       description: [
         "During my time at FractalUp, I worked as a Project Software Manager, contributing significantly to the team's success. I specialized in programming with TypeScript Vue, focusing on solving challenging tasks for the team.",

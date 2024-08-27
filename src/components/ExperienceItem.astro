@@ -1,4 +1,6 @@
 ---
+import { useTranslation } from "@/i18n";
+
 interface Props {
   title: string;
   company: string;
@@ -38,8 +40,11 @@ function formatDate(date: string) {
   });
 }
 
+const { t } = useTranslation(currentLocale);
 const startDateFormatted = formatDate(startDate);
-const endDateFormatted = isCurrent ? "Actualidad" : formatDate(endDate);
+const endDateFormatted = isCurrent
+  ? t("experiences.present")
+  : formatDate(endDate);
 ---
 
 <article class="flex flex-col gap-5 lg:flex-row">
