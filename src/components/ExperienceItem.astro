@@ -5,6 +5,7 @@ interface Props {
   title: string;
   company: string;
   companyIcon: any;
+  companyUrl: string;
   type: "remote" | "onsite" | "hybrid";
   startDate: string;
   endDate: string;
@@ -17,6 +18,7 @@ const {
   companyIcon: CompanyIcon,
   title,
   company,
+  companyUrl,
   startDate,
   endDate,
   description,
@@ -51,7 +53,7 @@ const endDateFormatted = isCurrent
   <span
     class="absolute -start-[17px] flex size-8 items-center justify-center rounded-full bg-accent-400 dark:bg-accent-200"
   >
-    <CompanyIcon class="dark:text-dark size-5 text-white" />
+    <CompanyIcon class="size-5 text-white dark:text-dark" />
   </span>
 
   <header class="lg:w-2/5">
@@ -64,8 +66,9 @@ const endDateFormatted = isCurrent
     <h4 class="mb-1 text-xl font-semibold">
       <a
         class="hover:underline"
-        href="https://www.info.fractalup.com/"
+        href={companyUrl}
         target="_blank"
+        rel="noopener noreferrer"
       >
         {company}
       </a>
