@@ -13,7 +13,7 @@ const es = {
       "Desarrollador Full Stack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos.",
   },
   hero: {
-    badge: "Disponible para trabajar",
+    badge: "¡Conectemos!",
     title: `Hola, soy ${callName}`,
     description: `Con más de 4 años de experiencia.
     <strong>Ingeniero de Software Senior</strong> <small>y</small> <strong>Desarrollador Full Stack</strong>.
@@ -94,7 +94,7 @@ const en: DeepPartial<typeof es> = {
       "Desarrollador Full Stack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos.",
   },
   hero: {
-    badge: "Available for work",
+    badge: "Let's connect!",
     title: `Hey, I'm ${callName}`,
     description: `4+ years of experience.
     <strong>Senior Software Engineer</strong> <small>&</small> <strong>Full Stack Developer</strong>.
