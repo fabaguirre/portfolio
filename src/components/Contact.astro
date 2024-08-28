@@ -1,10 +1,14 @@
 ---
+import { useTranslation } from "@/i18n";
 import { PROFILE_DATA } from "@config/constants";
 
 import GitHubIcon from "@icons/GitHub.astro";
 import GitlabIcon from "@icons/Gitlab.astro";
 import LinkedInIcon from "@icons/LinkedIn.astro";
 import MailFilledIcon from "@icons/MailFilled.astro";
+
+const { currentLocale } = Astro;
+const { t } = useTranslation(currentLocale);
 
 const {
   email,
@@ -15,7 +19,7 @@ const contactItems = [
   {
     href: `mailto:${email}`,
     icon: MailFilledIcon,
-    text: email,
+    text: t("contact.mailme"),
   },
   {
     href: linkedin.url,

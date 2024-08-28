@@ -75,6 +75,7 @@ const es = {
   },
   contact: {
     title: "Contacto",
+    mailme: "Envíame un correo",
   },
   footer: {
     greeting: "¡Ten un bonito día! 🎉",
@@ -144,14 +145,6 @@ const en: DeepPartial<typeof es> = {
         "A medical appointment management application designed for healthcare professionals. It allows doctors and healthcare staff to effectively manage appointments with their patients.",
     },
   },
-  /* 
-  
-  Hi, I'm Fabrizio, though most know me as "Fab". With over 4 years of experience in software development, I have worked as a Full Stack Developer and in technology project management. Recently, I’ve specialized in Golang and React Native, with a particular focus on backend development.
-
-I’ve developed and optimized full applications, enhancing both performance and user experience. This experience has allowed me to lead teams and deliver effective technological solutions, managing resources and deadlines efficiently.
-
-I’m a highly curious person, always eager to learn new things, both in technology and other fields. One of my hobbies is exploring educational content on YouTube, from science and technology to art and sports. My logical personality (INTP-A) helps me approach problems in a structured manner, finding efficient and well-thought-out solutions in my work.
-  */
   about: {
     title: "About me",
     description: [
@@ -163,6 +156,7 @@ I’m a highly curious person, always eager to learn new things, both in technol
   },
   contact: {
     title: "Contact",
+    mailme: "Send me an email",
   },
   footer: {
     greeting: "Have a nice day! 🎉",
