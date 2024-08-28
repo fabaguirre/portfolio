@@ -10,10 +10,9 @@
   div {
     &::before,
     &::after {
-      @apply absolute inset-[-2px] z-[-1] rounded-full;
+      @apply absolute inset-[-2px] z-[-1] rounded-full bg-gradient-to-tr from-emerald-300 to-blue-300 dark:from-emerald-500 dark:to-blue-500;
       content: "";
 
-      background: linear-gradient(-45deg, #10b981, #1d4ed8);
       background-size: 400% 400%;
       animation: rotate-gradient 7.5s cubic-bezier(0, 0.5, 1, 0.5) infinite;
     }
