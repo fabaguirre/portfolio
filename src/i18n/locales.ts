@@ -10,13 +10,13 @@ const es = {
   meta: {
     title: "Fab | Desarrollador Full Stack",
     description:
-      "Senior Software Engineer especializado en Golang y React Native. Con experiencia en backend, liderando proyectos tecnológicos y desarrollando soluciones eficientes.",
+      "Software Engineer especializado en Golang y React Native. Con experiencia en backend, liderando proyectos tecnológicos y desarrollando soluciones eficientes.",
   },
   hero: {
     badge: "¡Conectemos!",
     title: `Hola, soy ${callName}`,
     description: `Con más de 4 años de experiencia.
-    <strong>Ingeniero de Software Senior</strong> <small>y</small> <strong>Desarrollador Full Stack</strong>.
+    <strong>Ingeniero de Software</strong> <small>y</small> <strong>Desarrollador Full Stack</strong>.
     Basado en Perú 🇵🇪. Actualmente especializado en
     <span class="font-medium text-[#00ADD8]">Golang</span>
     y
@@ -44,7 +44,7 @@ const es = {
       ],
     },
     encora_senior_software_engineer: {
-      title: "Senior Software Engineer",
+      title: "Software Engineer II",
       description: [
         "Especializado en el sector financiero, utilizo Golang y React Native para desarrollar soluciones innovadoras y eficientes. Mi enfoque está en la creación de aplicaciones seguras y de alto rendimiento, adaptadas a las necesidades del mercado financiero.",
       ],
@@ -91,13 +91,13 @@ const en: DeepPartial<typeof es> = {
   meta: {
     title: "Fab | Full Stack Developer",
     description:
-      "Senior Software Engineer specializing in Golang and React Native. Experienced in backend, leading tech projects, and developing efficient solutions.",
+      "Software Engineer specializing in Golang and React Native. Experienced in backend, leading tech projects, and developing efficient solutions.",
   },
   hero: {
     badge: "Let's connect!",
     title: `Hey, I'm ${callName}`,
     description: `4+ years of experience.
-    <strong>Senior Software Engineer</strong> <small>&</small> <strong>Full Stack Developer</strong>.
+    <strong>Software Engineer</strong> <small>&</small> <strong>Full Stack Developer</strong>.
     Based in Peru 🇵🇪. Currently specializing in
     <span class="font-medium text-[#00ADD8]">Golang</span>
     and
@@ -126,7 +126,7 @@ const en: DeepPartial<typeof es> = {
     },
 
     encora_senior_software_engineer: {
-      title: "Senior Software Engineer",
+      title: "Software Engineer II",
       description: [
         "Specialized in the financial sector, I use Golang and React Native to develop innovative and efficient solutions. My focus is on creating secure and high-performance applications tailored to the needs of the financial market.",
       ],
