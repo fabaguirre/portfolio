@@ -10,7 +10,7 @@ const es = {
   meta: {
     title: "Fab | Desarrollador Full Stack",
     description:
-      "Desarrollador Full Stack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos.",
+      "Senior Software Engineer especializado en Golang y React Native. Con experiencia en backend, liderando proyectos tecnológicos y desarrollando soluciones eficientes.",
   },
   hero: {
     badge: "¡Conectemos!",
@@ -91,7 +91,7 @@ const en: DeepPartial<typeof es> = {
   meta: {
     title: "Fab | Full Stack Developer",
     description:
-      "Desarrollador Full Stack con amplia experiencia en frontend, especializado en Vue.js. También he trabajado como Project Manager y tengo una sólida trayectoria en backend con Node.js, Express y MySQL. Descubre mis proyectos y habilidades en desarrollo web y gestión de proyectos.",
+      "Senior Software Engineer specializing in Golang and React Native. Experienced in backend, leading tech projects, and developing efficient solutions.",
   },
   hero: {
     badge: "Let's connect!",
