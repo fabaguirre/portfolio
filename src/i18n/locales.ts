@@ -27,7 +27,7 @@ const es = {
     title: "Experiencia",
     present: "presente",
     fractalup_project_manager: {
-      title: "Software Project Manager",
+      title: "Project Manager de Software",
       description: [
         "Durante mi tiempo en FractalUp, trabajé como Project Software Manager, contribuyendo significativamente al éxito del equipo. Me especialicé en programación con TypeScript Vue, enfocándome en resolver tareas desafiantes para el equipo.",
         "Lideré el análisis y diseño de nuevas funcionalidades, creando diagramas de flujo, diagramas de clase y estructuras de tablas en la base de datos para guiar el desarrollo. También organicé y coordiné tareas para los programadores, asegurando el cumplimiento de los plazos establecidos.",
@@ -108,6 +108,7 @@ const en: DeepPartial<typeof es> = {
     title: "Experience",
     present: "present",
     fractalup_project_manager: {
+      title: "Software Project Manager",
       description: [
         "During my time at FractalUp, I worked as a Project Software Manager, contributing significantly to the team's success. I specialized in programming with TypeScript Vue, focusing on solving challenging tasks for the team.",
         "I led the analysis and design of new features, creating flowcharts, class diagrams, and database table structures to guide development. I also organized and coordinated tasks for programmers, ensuring compliance with established deadlines.",
