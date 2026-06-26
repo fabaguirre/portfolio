@@ -81,7 +81,10 @@ const navItems = useSections({ currentLocale });
 
 <style>
   nav {
-    animation: nav-shadown 1s linear both;
+    animation-name: nav-shadown;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
     animation-timeline: scroll();
     animation-range: 0 10vh;
   }
