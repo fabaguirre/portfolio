@@ -4,6 +4,7 @@ import {
   type Translation,
   type TranslationPath,
 } from "./locales";
+import type { PathValue } from "./types";
 import merge from "deepmerge";
 
 function getLocale(locale: Locale): Translation {

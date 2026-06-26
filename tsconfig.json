@@ -8,5 +8,7 @@
       "@components/*": ["src/components/*"],
       "@config/*": ["src/config/*"]
     }
-  }
+  },
+  "include": [".astro/types.d.ts", "src/**/*.ts", "src/**/*.astro"],
+  "exclude": ["dist"]
 }

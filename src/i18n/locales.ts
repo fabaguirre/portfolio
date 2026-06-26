@@ -1,5 +1,6 @@
 import { PROFILE_DATA } from "@/config/constants";
 import type { DeepPartial } from "node_modules/astro/dist/type-utils";
+import type { Paths } from "./types";
 
 const {
   names: { firstName, lastName, callName },
