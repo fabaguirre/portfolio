@@ -78,10 +78,10 @@ const endDateFormatted = isCurrent
       aria-label={`Período de trabajo: ${startDateFormatted} - ${endDateFormatted}`}
       class="mb-3 block text-sm font-normal capitalize leading-none light:text-gray-500 lg:mb-5"
     >
-      <time datetime={startDate} class="after:content-['-']">
+      <time datetime={startDate}>
         {startDateFormatted}
       </time>
-      <!--  -->
+      {" - "}
       <time datetime={endDate}>
         {endDateFormatted}
       </time>

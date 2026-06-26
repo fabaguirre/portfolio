@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import { themeVariants } from "tailwindcss-theme-variants";
+import plugin from "tailwindcss/plugin";
 import colors from 'tailwindcss/colors';
 
 export default {
@@ -18,12 +18,8 @@ export default {
     },
   },
   plugins: [
-    themeVariants({
-      themes: {
-        light: {
-          selector: ":not(.dark)",
-        },
-      },
+    plugin(({ addVariant }) => {
+      addVariant("light", "html:not(.dark) &");
     }),
   ],
   darkMode: "selector",
