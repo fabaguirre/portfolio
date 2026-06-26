@@ -7,6 +7,7 @@ interface Props {
   link?: string;
   reverse?: boolean;
   title: string;
+  visitWebsiteLabel: string;
   technologies: {
     name: string;
     class: string;
@@ -14,8 +15,15 @@ interface Props {
   }[];
 }
 
-const { description, imageDirectory, link, reverse, title, technologies } =
-  Astro.props;
+const {
+  description,
+  imageDirectory,
+  link,
+  reverse,
+  title,
+  visitWebsiteLabel,
+  technologies,
+} = Astro.props;
 
 const imageBasePath = `/projects/${imageDirectory}`;
 const buildImage = (size: string = "default") =>
@@ -85,7 +93,7 @@ const imageHoverClass = reverse
             rel="noopener noreferrer"
             class="text-accent-800 hover:text-accent-900 hover:underline dark:text-accent-400 dark:hover:text-accent-500"
           >
-            Visita el sitio web
+            {visitWebsiteLabel}
           </a>
         )
       }

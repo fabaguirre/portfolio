@@ -1,5 +1,6 @@
 ---
 import { useTranslation } from "@/i18n";
+import { PROJECTS_DATA, type TechnologyId } from "@/data/portfolio";
 import ProjectItem from "@components/ProjectItem.astro";
 
 import AWSIcon from "@icons/Aws.astro";
@@ -13,50 +14,58 @@ import VueIcon from "@icons/Vue.astro";
 
 const { currentLocale } = Astro;
 const { t } = useTranslation(currentLocale);
+const locale = currentLocale === "en" ? "en" : "es";
 
-const TECHNOLOGIES = {
-  AWS: {
+const TECHNOLOGIES: Record<
+  TechnologyId,
+  {
+    name: string;
+    class: string;
+    icon: any;
+  }
+> = {
+  aws: {
     name: "AWS",
     class:
       "bg-[#FFF6E8] text-[#744600] dark:bg-[#FF990035] dark:text-[#FF9900]",
     icon: AWSIcon,
   },
-  EXPRESS: {
+  express: {
     name: "Express",
     class:
       "bg-[#F0F2F2] text-[#43494C] dark:bg-[#E4E7E835] dark:text-[#E4E7E8]",
     icon: ExpressIcon,
   },
-  GRAPHQL: {
+  graphql: {
     name: "GraphQL",
     class:
       "bg-[#FCE8F6] text-[#90026A] dark:bg-[#F18BD035] dark:text-[#F18BD0]",
     icon: GraphQLIcon,
   },
-  MYSQL: {
+  mysql: {
     name: "MySQL",
     class:
       "bg-[#E8F2F5] text-[#005568] dark:bg-[#74B4C235] dark:text-[#74B4C2]",
     icon: MySQLIcon,
   },
-  NODE: {
+  node: {
     name: "Node.js",
     class:
       "bg-[#E4F4DE] text-[#215732] dark:bg-[#6cc24a35] dark:text-[#6cc24a]", // #333333
     icon: NodeJSIcon,
   },
-  PRISMA: {
+  prisma: {
     name: "Prisma",
     class: "bg-[#EAEBEC] text-[#0C344B] dark:bg-[#071F33] dark:text-white",
     icon: PrismaIcon,
   },
-  TYPESCRIPT: {
+  typescript: {
     name: "TypeScript",
     class:
       "bg-[#ECF3FA] text-[#1F4C7E] dark:bg-[#8FB5E035] dark:text-[#8FB5E0]",
     icon: TypescriptIcon,
   },
-  VUE: {
+  vue: {
     name: "Vue.js",
     class:
       "bg-[#EEF9F4] text-[#35495e] dark:bg-[#42b88335] dark:text-[#42b883]",
@@ -64,33 +73,14 @@ const TECHNOLOGIES = {
   },
 };
 
-const projects = [
-  {
-    title: t("projects.fractalup.title"),
-    description: t("projects.fractalup.description"),
-    link: "https://fractalup.com/",
-    imageDirectory: "fractalup",
-    technologies: [
-      TECHNOLOGIES.VUE,
-      TECHNOLOGIES.TYPESCRIPT,
-      TECHNOLOGIES.GRAPHQL,
-    ],
-  },
-  {
-    title: t("projects.med_appt_app.title"),
-    description: t("projects.med_appt_app.description"),
-    imageDirectory: "med_appt",
-    technologies: [
-      TECHNOLOGIES.VUE,
-      TECHNOLOGIES.TYPESCRIPT,
-      TECHNOLOGIES.NODE,
-      TECHNOLOGIES.EXPRESS,
-      TECHNOLOGIES.AWS,
-      TECHNOLOGIES.MYSQL,
-      TECHNOLOGIES.PRISMA,
-    ],
-  },
-];
+const projects = PROJECTS_DATA.map((project) => ({
+  ...project,
+  ...project.content[locale],
+  technologies: project.technologies.map(
+    (technology) => TECHNOLOGIES[technology],
+  ),
+  visitWebsiteLabel: t("projects.visitWebsite"),
+}));
 ---
 
 <ul class="mt-16 space-y-24">

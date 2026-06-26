@@ -4,45 +4,21 @@ import ExperienceItem from "@components/ExperienceItem.astro";
 import FractalUpIcon from "@icons/FractalUp.astro";
 import EncoraIcon from "@icons/Encora.astro";
 
-import { useTranslation } from "@/i18n";
+import { EXPERIENCES_DATA } from "@/data/portfolio";
 
 const { currentLocale } = Astro;
+const locale = currentLocale === "en" ? "en" : "es";
 
-const { t } = useTranslation(currentLocale);
+const COMPANY_ICONS = {
+  encora: EncoraIcon,
+  fractalup: FractalUpIcon,
+};
 
-const experience = [
-  {
-    title: t("experiences.encora_senior_software_engineer.title"),
-    company: "Encora Inc.",
-    companyIcon: EncoraIcon,
-    companyUrl: "http://www.encora.com/",
-    type: "remote" as const,
-    startDate: "2024-09-01",
-    endDate: "2024-09-01",
-    isCurrent: true,
-    description: t("experiences.encora_senior_software_engineer.description"),
-  },
-  {
-    title: t("experiences.fractalup_project_manager.title"),
-    company: "FractalUp",
-    companyIcon: FractalUpIcon,
-    companyUrl: "https://www.info.fractalup.com/",
-    type: "remote" as const,
-    startDate: "2022-03-01",
-    endDate: "2024-02-01",
-    description: t("experiences.fractalup_project_manager.description"),
-  },
-  {
-    title: t("experiences.fractalup_fullstack.title"),
-    company: "FractalUp",
-    companyIcon: FractalUpIcon,
-    companyUrl: "https://www.info.fractalup.com/",
-    type: "remote" as const,
-    startDate: "2021-02-01",
-    endDate: "2022-02-01",
-    description: t("experiences.fractalup_fullstack.description"),
-  },
-];
+const experience = EXPERIENCES_DATA.map((item) => ({
+  ...item,
+  ...item.content[locale],
+  companyIcon: COMPANY_ICONS[item.companyIcon],
+}));
 ---
 
 <ol

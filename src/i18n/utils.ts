@@ -5,12 +5,9 @@ import {
   type TranslationPath,
 } from "./locales";
 import type { PathValue } from "./types";
-import merge from "deepmerge";
 
 function getLocale(locale: Locale): Translation {
-  return merge(locales.es, locales[locale], {
-    isMergeableObject: (val) => typeof val === "object" && !Array.isArray(val),
-  }) as Translation;
+  return locales[locale] as Translation;
 }
 
 function getTranslation<P extends TranslationPath>(
