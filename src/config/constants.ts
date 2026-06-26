@@ -8,12 +8,12 @@ const PAGE_SECTIONS = [
     component: () =>
       import("@components/Experience.astro").then((mod) => mod.default),
   },
-  {
-    id: PAGE_SECTION_IDS[1],
-    icon: () => import("@icons/SourceCode.astro").then((mod) => mod.default),
-    component: () =>
-      import("@components/Projects.astro").then((mod) => mod.default),
-  },
+  // {
+  //   id: PAGE_SECTION_IDS[1],
+  //   icon: () => import("@icons/SourceCode.astro").then((mod) => mod.default),
+  //   component: () =>
+  //     import("@components/Projects.astro").then((mod) => mod.default),
+  // },
   {
     id: PAGE_SECTION_IDS[2],
     icon: () => import("@icons/UserSquare.astro").then((mod) => mod.default),

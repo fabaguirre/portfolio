@@ -5,8 +5,9 @@ export const PROFILE_DATA = {
     socialNickname: "fabos",
     lastName: "Aguirre",
   },
-  email: "faguirrecruz@hotmail.com",
-  yearsExperience: 4,
+  email: "me@fabos.dev",
+  phone: "+51 968 653 101",
+  yearsExperience: 6,
   location: {
     country: "Peru",
     emoji: "🇵🇪",
@@ -44,52 +45,50 @@ export const PAGE_SECTION_IDS = [
 
 export const EXPERIENCES_DATA = [
   {
-    company: "Encora Inc.",
-    companyIcon: "encora",
-    companyUrl: "http://www.encora.com/",
+    company: "Oka",
+    companyIcon: "oka",
+    companyUrl: "https://www.oka.com.pe/",
     type: "remote",
-    startDate: "2024-09-01",
-    endDate: "2024-09-01",
+    startDate: "2025-07-01",
+    endDate: "2025-07-01",
     isCurrent: true,
     content: {
       es: {
-        title: "Software Engineer II",
+        title: "Líder Técnico",
         description: [
-          "Especializado en el sector financiero, utilizo Golang y React Native para desarrollar soluciones innovadoras y eficientes. Mi enfoque está en la creación de aplicaciones seguras y de alto rendimiento, adaptadas a las necesidades del mercado financiero.",
+          "Lidero un equipo backend responsable de plataformas críticas del negocio, convirtiendo requerimientos funcionales en soluciones técnicas escalables.",
+          "Defino arquitecturas, estándares de desarrollo y decisiones técnicas, coordinando la entrega junto a Developers, QA, DevOps y Product.",
         ],
       },
       en: {
-        title: "Software Engineer II",
+        title: "Tech Lead",
         description: [
-          "Specialized in the financial sector, I use Golang and React Native to develop innovative and efficient solutions. My focus is on creating secure and high-performance applications tailored to the needs of the financial market.",
+          "Leading a backend team responsible for business-critical platforms, turning product requirements into scalable technical solutions.",
+          "Defining architecture, engineering standards, and technical decisions while coordinating delivery across Developers, QA, DevOps, and Product.",
         ],
       },
     },
   },
   {
-    company: "FractalUp",
-    companyIcon: "fractalup",
-    companyUrl: "https://www.info.fractalup.com/",
+    company: "Encora Inc.",
+    companyIcon: "encora",
+    companyUrl: "https://www.encora.com/",
     type: "remote",
-    startDate: "2022-03-01",
-    endDate: "2024-02-01",
+    startDate: "2024-09-01",
+    endDate: "2025-07-01",
     content: {
       es: {
-        title: "Project Manager de Software",
+        title: "Desarrollador Backend",
         description: [
-          "Durante mi tiempo en FractalUp, trabajé como Project Software Manager, contribuyendo significativamente al éxito del equipo. Me especialicé en programación con TypeScript Vue, enfocándome en resolver tareas desafiantes para el equipo.",
-          "Lideré el análisis y diseño de nuevas funcionalidades, creando diagramas de flujo, diagramas de clase y estructuras de tablas en la base de datos para guiar el desarrollo. También organicé y coordiné tareas para los programadores, asegurando el cumplimiento de los plazos establecidos.",
-          "Desarrollé características clave como analítica del sitio web, chat de mensajería, flujo completo de inicio de sesión y registro de usuarios, y perfil de usuario. Estas tareas me dieron una comprensión integral del desarrollo de software.",
-          "Esta experiencia fortaleció mis habilidades técnicas y mejoró mis capacidades de liderazgo y organización, permitiéndome gestionar proyectos complejos y garantizar entregas eficientes.",
+          "Desarrollé servicios backend para el sector financiero utilizando Golang y Google Cloud Platform.",
+          "Participé en la modernización de sistemas bancarios, mejorando rendimiento, seguridad y escalabilidad.",
         ],
       },
       en: {
-        title: "Software Project Manager",
+        title: "Backend Developer",
         description: [
-          "During my time at FractalUp, I worked as a Project Software Manager, contributing significantly to the team's success. I specialized in programming with TypeScript Vue, focusing on solving challenging tasks for the team.",
-          "I led the analysis and design of new features, creating flowcharts, class diagrams, and database table structures to guide development. I also organized and coordinated tasks for programmers, ensuring compliance with established deadlines.",
-          "I developed key features such as website analytics, messaging chat, full login and user registration flow, and user profile. These tasks gave me a comprehensive understanding of software development.",
-          "This experience strengthened my technical skills and improved my leadership and organizational abilities, allowing me to manage complex projects and ensure efficient deliveries.",
+          "Built backend services for the financial industry using Golang and Google Cloud Platform.",
+          "Contributed to modernizing banking systems, improving performance, security, and scalability.",
         ],
       },
     },
@@ -100,28 +99,25 @@ export const EXPERIENCES_DATA = [
     companyUrl: "https://www.info.fractalup.com/",
     type: "remote",
     startDate: "2021-02-01",
-    endDate: "2022-02-01",
+    endDate: "2024-02-01",
     content: {
       es: {
-        title: "Desarrollador Full Stack",
+        title: "Líder Técnico",
         description: [
-          "Desarrollé componentes de UI para una biblioteca de componentes y para el resto de la aplicación utilizando Vue.js y TypeScript, asegurando su calidad mediante pruebas con Jest.",
-          "Implementé integraciones API con GraphQL, mejorando el uso de la caché de Apollo para minimizar la cantidad de peticiones al servidor y optimizar el rendimiento.",
-          "Mantuve y actualicé continuamente la base de código para adaptarse a los cambios y mejoras necesarias, asegurando la estabilidad y eficiencia del sistema.",
+          "Crecí desde Desarrollador Full Stack hasta Líder Técnico, liderando la evolución técnica del producto y nuevas funcionalidades.",
+          "Participé en el diseño de arquitectura, liderazgo del equipo y desarrollo full stack con Vue, TypeScript y GraphQL.",
         ],
       },
       en: {
-        title: "Full Stack Developer",
+        title: "Tech Lead",
         description: [
-          "Developed UI components for a component library and for the rest of the application using Vue.js and TypeScript, ensuring its quality through Jest tests.",
-          "Implemented API integrations with GraphQL, improving the use of Apollo cache to minimize the number of requests to the server and optimize performance.",
-          "Continuously maintained and updated the codebase to adapt to necessary changes and improvements, ensuring system stability and efficiency.",
+          "Progressed from Full Stack Developer to Tech Lead, leading the product's technical evolution and the development of new features.",
+          "Worked on architecture, team leadership, and full-stack development using Vue, TypeScript, and GraphQL.",
         ],
       },
     },
   },
 ] as const;
-
 export const PROJECTS_DATA = [
   {
     link: "https://fractalup.com/",
@@ -155,12 +151,12 @@ export const PROJECTS_DATA = [
       es: {
         title: "Medical Appointment App",
         description:
-          "Una aplicación de gestión de citas médicas diseñada para profesionales sanitarios. Permite a los médicos y al personal sanitario gestionar eficazmente las citas con sus pacientes.",
+          "Una aplicación de gestión de citas médicas diseñada para profesionales sanitarios. Permite gestionar citas, pacientes y disponibilidad de manera eficiente.",
       },
       en: {
         title: "Medical Appointment App",
         description:
-          "A medical appointment management application designed for healthcare professionals. It allows doctors and healthcare staff to effectively manage appointments with their patients.",
+          "A medical appointment management application designed for healthcare professionals. It allows appointments, patients, and availability to be managed efficiently.",
       },
     },
   },
@@ -169,19 +165,14 @@ export const PROJECTS_DATA = [
 export const CONTENT_DATA = {
   es: {
     meta: {
-      title: "Fab | Desarrollador Full Stack",
+      title: "Fab | Líder Técnico Backend",
       description:
-        "Software Engineer especializado en Golang y React Native. Con experiencia en backend, liderando proyectos tecnológicos y desarrollando soluciones eficientes.",
+        "Líder Técnico especializado en plataformas para el sector financiero, arquitectura backend y sistemas distribuidos.",
     },
     hero: {
       badge: "¡Conectemos!",
       title: `Hola, soy ${callName}`,
-      description: `Con más de ${yearsExperience} años de experiencia.
-    <strong>Ingeniero de Software</strong> <small>y</small> <strong>Desarrollador Full Stack</strong>.
-    Basado en ${location.country} ${location.emoji}. Actualmente especializado en
-    <span class="font-medium text-[#00ADD8]">Golang</span>
-    y
-    <span class="font-medium text-[#61dbfb]">React Native</span>`,
+      description: `<strong>Líder Técnico</strong> con más de ${yearsExperience} años de experiencia construyendo plataformas para el <span class="font-medium text-[#22C55E]">sector financiero</span>.`,
       alt: `Foto de perfil de ${fullName}`,
     },
     experiences: {
@@ -195,9 +186,11 @@ export const CONTENT_DATA = {
     about: {
       title: "Sobre mí",
       description: [
-        `Hola, soy ${firstName}, aunque la mayoría me conoce como <em>"${callName}"</em>. Con <strong>más de ${yearsExperience} años de experiencia</strong> en el desarrollo de software, he trabajado como Full Stack Developer y en la gestión de proyectos tecnológicos. Recientemente, me he especializado en Golang y React Native, con un <strong>enfoque particular en el backend</strong>.`,
-        "He desarrollado y optimizado aplicaciones completas, mejorando tanto el rendimiento como la experiencia del usuario. Esta experiencia me ha permitido <strong>liderar equipos y entregar soluciones tecnológicas efectivas</strong>, gestionando recursos y plazos de manera eficiente.",
-        `Soy una persona muy curiosa, <strong>siempre buscando aprender cosas nuevas</strong>, tanto en tecnología como en otros campos. Uno de mis hobbies es explorar contenido educativo en YouTube, desde ciencia y tecnología hasta arte y deportes. Mi <strong>personalidad lógica</strong> (INTP-A) me permite abordar problemas de manera estructurada, encontrando soluciones eficientes y bien pensadas en mi trabajo.`,
+        `Soy <strong>Líder Técnico Backend</strong> con <strong>más de ${yearsExperience} años de experiencia</strong> construyendo plataformas para el <strong>sector financiero</strong> y liderando la evolución técnica de productos de software.`,
+
+        `Con el paso de los años, mi enfoque ha evolucionado desde el desarrollo backend hacia el <strong>diseño de soluciones</strong>, participando activamente en <strong>decisiones de arquitectura</strong>, definición de estándares técnicos y evolución de sistemas distribuidos.`,
+
+        `Disfruto especialmente la <strong>arquitectura de software</strong> y el diseño de <strong>Event-Driven Architectures</strong>. Busco construir <strong>plataformas escalables, resilientes y preparadas para evolucionar</strong>, creando soluciones que acompañen el crecimiento del negocio a largo plazo.`,
       ],
       alt: `Foto de perfil de ${fullName}`,
     },
@@ -216,19 +209,14 @@ export const CONTENT_DATA = {
   },
   en: {
     meta: {
-      title: "Fab | Full Stack Developer",
+      title: "Fab | Backend Technical Lead",
       description:
-        "Software Engineer specializing in Golang and React Native. Experienced in backend, leading tech projects, and developing efficient solutions.",
+        "Technical Lead specialized in financial platforms, backend architecture, and distributed systems.",
     },
     hero: {
       badge: "Let's connect!",
       title: `Hey, I'm ${callName}`,
-      description: `${yearsExperience}+ years of experience.
-    <strong>Software Engineer</strong> <small>&</small> <strong>Full Stack Developer</strong>.
-    Based in ${location.country} ${location.emoji}. Currently specializing in
-    <span class="font-medium text-[#00ADD8]">Golang</span>
-    and
-    <span class="font-medium text-[#61dbfb]">React Native</span>`,
+      description: `<strong>Technical Lead</strong> with over ${yearsExperience} years of experience building platforms for the <span class="font-medium text-[#22C55E]">financial industry</span>.`,
       alt: `Profile picture of ${fullName}`,
     },
     experiences: {
@@ -242,9 +230,11 @@ export const CONTENT_DATA = {
     about: {
       title: "About me",
       description: [
-        `Hi, I'm ${firstName}, though most know me as <em>"${callName}"</em>. With <strong>over ${yearsExperience} years of experience</strong> in software development, I have worked as a Full Stack Developer and in technology project management. Recently, I’ve specialized in Golang and React Native, with a <strong>particular focus on backend development</strong>.`,
-        "I’ve developed and optimized full applications, enhancing both performance and user experience. This experience has allowed me to <strong>lead teams and deliver effective technological solutions</strong>, managing resources and deadlines efficiently.",
-        `I’m a highly curious person, <strong>always eager to learn new things</strong>, both in technology and other fields. One of my hobbies is exploring educational content on YouTube, from science and technology to art and sports. My <strong>logical personality</strong> (INTP-A) helps me approach problems in a structured manner, finding efficient and well-thought-out solutions in my work.`,
+        `I'm a <strong>Backend Technical Lead</strong> with <strong>over ${yearsExperience} years of experience</strong> building platforms for the <strong>financial industry</strong> and leading the technical evolution of software products.`,
+
+        `Over the years, my focus has evolved from backend development to <strong>solution design</strong>, actively contributing to <strong>architecture decisions</strong>, engineering standards, and the evolution of distributed systems.`,
+
+        `I'm particularly interested in <strong>software architecture</strong> and <strong>Event-Driven Architectures</strong>. I enjoy building <strong>scalable, resilient, and evolvable platforms</strong> that support long-term business growth.`,
       ],
       alt: `Profile picture of ${fullName}`,
     },

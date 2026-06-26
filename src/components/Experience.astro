@@ -3,6 +3,7 @@ import ExperienceItem from "@components/ExperienceItem.astro";
 
 import FractalUpIcon from "@icons/FractalUp.astro";
 import EncoraIcon from "@icons/Encora.astro";
+import OkaIcon from "@icons/Oka.astro";
 
 import { EXPERIENCES_DATA } from "@/data/portfolio";
 
@@ -12,6 +13,7 @@ const locale = currentLocale === "en" ? "en" : "es";
 const COMPANY_ICONS = {
   encora: EncoraIcon,
   fractalup: FractalUpIcon,
+  oka: OkaIcon
 };
 
 const experience = EXPERIENCES_DATA.map((item) => ({
